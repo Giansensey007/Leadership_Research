@@ -1,0 +1,51 @@
+ticker,company_name,industry,filing_date,filing_type,source
+AAPL,Apple Inc.,Technology,2026-01-08,DEF 14A,SEC EDGAR
+MSFT,Microsoft Corp.,Technology,2025-10-21,DEF 14A,SEC EDGAR
+GOOG,Alphabet Inc.,Technology,2025-04-25,DEF 14A,SEC EDGAR
+META,Meta Platforms Inc.,Technology,2025-04-17,DEF 14A,SEC EDGAR
+NVDA,NVIDIA Corp.,Technology,2025-05-13,DEF 14A,SEC EDGAR
+CRM,Salesforce Inc.,Technology,2025-04-24,DEF 14A,SEC EDGAR
+ADBE,Adobe Inc.,Technology,2026-02-27,DEF 14A,SEC EDGAR
+ORCL,Oracle Corp.,Technology,2025-09-26,DEF 14A,SEC EDGAR
+JPM,JPMorgan Chase & Co.,Finance,2025-04-07,DEF 14A,SEC EDGAR
+BAC,Bank of America Corp.,Finance,2025-03-10,DEF 14A,SEC EDGAR
+GS,Goldman Sachs Group Inc.,Finance,2025-03-14,DEF 14A,SEC EDGAR
+MS,Morgan Stanley,Finance,2025-04-04,DEF 14A,SEC EDGAR
+C,Citigroup Inc.,Finance,2025-03-18,DEF 14A,SEC EDGAR
+WFC,Wells Fargo & Co.,Finance,2025-03-19,DEF 14A,SEC EDGAR
+BLK,BlackRock Inc.,Finance,2025-04-04,DEF 14A,SEC EDGAR
+JNJ,Johnson & Johnson,Healthcare,2025-03-12,DEF 14A,SEC EDGAR
+UNH,UnitedHealth Group Inc.,Healthcare,2025-04-21,DEF 14A,SEC EDGAR
+PFE,Pfizer Inc.,Healthcare,2025-03-13,DEF 14A,SEC EDGAR
+ABBV,AbbVie Inc.,Healthcare,2025-03-24,DEF 14A,SEC EDGAR
+MRK,Merck & Co. Inc.,Healthcare,2025-04-09,DEF 14A,SEC EDGAR
+LLY,Eli Lilly & Co.,Healthcare,2025-03-21,DEF 14A,SEC EDGAR
+AMZN,Amazon.com Inc.,Consumer,2025-04-10,DEF 14A,SEC EDGAR
+WMT,Walmart Inc.,Consumer,2025-04-24,DEF 14A,SEC EDGAR
+PG,Procter & Gamble Co.,Consumer,2025-08-29,DEF 14A,SEC EDGAR
+KO,Coca-Cola Co.,Consumer,2025-03-17,DEF 14A,SEC EDGAR
+PEP,PepsiCo Inc.,Consumer,2025-03-28,DEF 14A,SEC EDGAR
+NKE,Nike Inc.,Consumer,2025-07-17,DEF 14A,SEC EDGAR
+SBUX,Starbucks Corp.,Consumer,2026-01-26,DEF 14A,SEC EDGAR
+MCD,McDonald's Corp.,Consumer,2025-04-07,DEF 14A,SEC EDGAR
+COST,Costco Wholesale Corp.,Consumer,2025-12-04,DEF 14A,SEC EDGAR
+GE,General Electric Co.,Industrial,2025-03-13,DEF 14A,SEC EDGAR
+CAT,Caterpillar Inc.,Industrial,2025-04-30,DEF 14A,SEC EDGAR
+HON,Honeywell Intl Inc.,Industrial,2025-04-09,DEF 14A,SEC EDGAR
+BA,Boeing Co.,Industrial,2025-03-07,DEF 14A,SEC EDGAR
+MMM,3M Co.,Industrial,2025-03-26,DEF 14A,SEC EDGAR
+UPS,United Parcel Service Inc.,Industrial,2025-03-17,DEF 14A,SEC EDGAR
+XOM,Exxon Mobil Corp.,Energy,2025-04-07,DEF 14A,SEC EDGAR
+CVX,Chevron Corp.,Energy,2025-04-09,DEF 14A,SEC EDGAR
+COP,ConocoPhillips,Energy,2025-03-31,DEF 14A,SEC EDGAR
+SLB,Schlumberger Ltd.,Energy,2026-02-26,DEF 14A,SEC EDGAR
+DIS,Walt Disney Co.,Media,2026-01-22,DEF 14A,SEC EDGAR
+NFLX,Netflix Inc.,Media,2025-04-17,DEF 14A,SEC EDGAR
+CMCSA,Comcast Corp.,Media,2025-04-25,DEF 14A,SEC EDGAR
+T,AT&T Inc.,Telecom,2025-04-04,DEF 14A,SEC EDGAR
+VZ,Verizon Communications Inc.,Telecom,2025-04-07,DEF 14A,SEC EDGAR
+TSLA,Tesla Inc.,Automotive,2025-09-17,DEF 14A,SEC EDGAR
+GM,General Motors Co.,Automotive,2025-04-22,DEF 14A,SEC EDGAR
+FDX,FedEx Corp.,Logistics,2025-08-18,DEF 14A,SEC EDGAR
+IBM,IBM Corp.,Technology,2025-03-10,DEF 14A,SEC EDGAR
+INTC,Intel Corp.,Technology,2025-03-27,DEF 14A,SEC EDGAR

@@ -1,0 +1,51 @@
+ticker,company,industry,year,board_size,women_on_board,female_ceo,female_cfo,female_cxo_count,c_suite_size,employees,revenue_bn,sp500,fortune500_rank,pct_women_board,pct_women_csuite,has_female_ceo,has_female_cfo,log_employees,log_revenue,sec_filing_date,sec_filing_type,data_source
+AAPL,Apple Inc.,Technology,2024,8,3,0,0,2,10,164000,383,1,3,37.5,20.0,0,0,12.01,5.95,2026-01-08,DEF 14A,SEC EDGAR + Public Governance Reports
+MSFT,Microsoft Corp.,Technology,2024,12,4,0,0,3,12,228000,245,1,13,33.3,25.0,0,0,12.34,5.5,2025-10-21,DEF 14A,SEC EDGAR + Public Governance Reports
+GOOG,Alphabet Inc.,Technology,2024,11,4,0,1,2,10,182000,307,1,8,36.4,20.0,0,1,12.11,5.73,2025-04-25,DEF 14A,SEC EDGAR + Public Governance Reports
+META,Meta Platforms Inc.,Technology,2024,9,3,0,1,2,8,67000,135,1,27,33.3,25.0,0,1,11.11,4.91,2025-04-17,DEF 14A,SEC EDGAR + Public Governance Reports
+NVDA,NVIDIA Corp.,Technology,2024,12,3,0,1,1,8,29600,61,1,97,25.0,12.5,0,1,10.3,4.11,2025-05-13,DEF 14A,SEC EDGAR + Public Governance Reports
+CRM,Salesforce Inc.,Technology,2024,12,4,0,0,2,10,73000,35,1,136,33.3,20.0,0,0,11.2,3.56,2025-04-24,DEF 14A,SEC EDGAR + Public Governance Reports
+ADBE,Adobe Inc.,Technology,2024,11,4,0,0,2,9,30000,20,1,226,36.4,22.2,0,0,10.31,3.0,2026-02-27,DEF 14A,SEC EDGAR + Public Governance Reports
+ORCL,Oracle Corp.,Technology,2024,14,5,1,0,2,9,164000,53,1,80,35.7,22.2,1,0,12.01,3.97,2025-09-26,DEF 14A,SEC EDGAR + Public Governance Reports
+IBM,IBM Corp.,Technology,2024,13,4,0,0,2,10,288000,62,1,63,30.8,20.0,0,0,12.57,4.13,2025-03-10,DEF 14A,SEC EDGAR + Public Governance Reports
+INTC,Intel Corp.,Technology,2024,11,3,0,0,1,10,124800,54,1,68,27.3,10.0,0,0,11.73,3.99,2025-03-27,DEF 14A,SEC EDGAR + Public Governance Reports
+JPM,JPMorgan Chase & Co.,Finance,2024,10,3,0,0,2,12,309000,158,1,19,30.0,16.7,0,0,12.64,5.06,2025-04-07,DEF 14A,SEC EDGAR + Public Governance Reports
+BAC,Bank of America Corp.,Finance,2024,15,5,0,0,3,11,213000,99,1,25,33.3,27.3,0,0,12.27,4.6,2025-03-10,DEF 14A,SEC EDGAR + Public Governance Reports
+GS,Goldman Sachs Group Inc.,Finance,2024,11,4,0,0,1,10,49000,46,1,55,36.4,10.0,0,0,10.8,3.83,2025-03-14,DEF 14A,SEC EDGAR + Public Governance Reports
+MS,Morgan Stanley,Finance,2024,14,5,0,0,2,10,82000,54,1,61,35.7,20.0,0,0,11.31,3.99,2025-04-04,DEF 14A,SEC EDGAR + Public Governance Reports
+C,Citigroup Inc.,Finance,2024,13,5,1,0,3,11,240000,78,1,33,38.5,27.3,1,0,12.39,4.36,2025-03-18,DEF 14A,SEC EDGAR + Public Governance Reports
+WFC,Wells Fargo & Co.,Finance,2024,12,4,0,0,2,10,234000,82,1,30,33.3,20.0,0,0,12.36,4.41,2025-03-19,DEF 14A,SEC EDGAR + Public Governance Reports
+BLK,BlackRock Inc.,Finance,2024,17,5,0,0,2,9,20000,18,1,238,29.4,22.2,0,0,9.9,2.89,2025-04-04,DEF 14A,SEC EDGAR + Public Governance Reports
+JNJ,Johnson & Johnson,Healthcare,2024,12,4,0,0,2,10,131900,85,1,37,33.3,20.0,0,0,11.79,4.44,2025-03-12,DEF 14A,SEC EDGAR + Public Governance Reports
+UNH,UnitedHealth Group Inc.,Healthcare,2024,12,4,0,0,2,10,400000,372,1,5,33.3,20.0,0,0,12.9,5.92,2025-04-21,DEF 14A,SEC EDGAR + Public Governance Reports
+PFE,Pfizer Inc.,Healthcare,2024,12,4,0,0,2,10,88000,58,1,42,33.3,20.0,0,0,11.39,4.06,2025-03-13,DEF 14A,SEC EDGAR + Public Governance Reports
+ABBV,AbbVie Inc.,Healthcare,2024,12,4,0,0,2,9,50000,54,1,64,33.3,22.2,0,0,10.82,3.99,2025-03-24,DEF 14A,SEC EDGAR + Public Governance Reports
+MRK,Merck & Co. Inc.,Healthcare,2024,12,5,0,1,3,10,69000,60,1,72,41.7,30.0,0,1,11.14,4.09,2025-04-09,DEF 14A,SEC EDGAR + Public Governance Reports
+LLY,Eli Lilly & Co.,Healthcare,2024,14,5,0,0,2,10,43000,34,1,102,35.7,20.0,0,0,10.67,3.53,2025-03-21,DEF 14A,SEC EDGAR + Public Governance Reports
+AMZN,Amazon.com Inc.,Consumer,2024,10,3,0,0,1,10,1525000,575,1,2,30.0,10.0,0,0,14.24,6.35,2025-04-10,DEF 14A,SEC EDGAR + Public Governance Reports
+WMT,Walmart Inc.,Consumer,2024,12,4,0,0,2,10,2100000,648,1,1,33.3,20.0,0,0,14.56,6.47,2025-04-24,DEF 14A,SEC EDGAR + Public Governance Reports
+PG,Procter & Gamble Co.,Consumer,2024,12,5,0,0,2,10,107000,84,1,28,41.7,20.0,0,0,11.58,4.43,2025-08-29,DEF 14A,SEC EDGAR + Public Governance Reports
+KO,Coca-Cola Co.,Consumer,2024,14,5,0,0,2,9,79000,46,1,87,35.7,22.2,0,0,11.28,3.83,2025-03-17,DEF 14A,SEC EDGAR + Public Governance Reports
+PEP,PepsiCo Inc.,Consumer,2024,13,5,0,0,2,10,318000,91,1,44,38.5,20.0,0,0,12.67,4.51,2025-03-28,DEF 14A,SEC EDGAR + Public Governance Reports
+NKE,Nike Inc.,Consumer,2024,12,4,0,0,2,9,79100,51,1,85,33.3,22.2,0,0,11.28,3.93,2025-07-17,DEF 14A,SEC EDGAR + Public Governance Reports
+SBUX,Starbucks Corp.,Consumer,2024,11,4,0,1,3,9,361000,36,1,114,36.4,33.3,0,1,12.8,3.58,2026-01-26,DEF 14A,SEC EDGAR + Public Governance Reports
+MCD,McDonald's Corp.,Consumer,2024,12,4,0,0,2,10,150000,25,1,152,33.3,20.0,0,0,11.92,3.22,2025-04-07,DEF 14A,SEC EDGAR + Public Governance Reports
+COST,Costco Wholesale Corp.,Consumer,2024,12,4,0,0,1,8,316000,254,1,10,33.3,12.5,0,0,12.66,5.54,2025-12-04,DEF 14A,SEC EDGAR + Public Governance Reports
+GE,General Electric Co.,Industrial,2024,10,3,0,0,1,9,125000,68,1,49,30.0,11.1,0,0,11.74,4.22,2025-03-13,DEF 14A,SEC EDGAR + Public Governance Reports
+CAT,Caterpillar Inc.,Industrial,2024,11,3,0,0,1,10,113200,67,1,52,27.3,10.0,0,0,11.64,4.2,2025-04-30,DEF 14A,SEC EDGAR + Public Governance Reports
+HON,Honeywell Intl Inc.,Industrial,2024,11,3,0,0,1,10,95000,37,1,100,27.3,10.0,0,0,11.46,3.61,2025-04-09,DEF 14A,SEC EDGAR + Public Governance Reports
+BA,Boeing Co.,Industrial,2024,12,3,0,0,1,10,170000,78,1,69,25.0,10.0,0,0,12.04,4.36,2025-03-07,DEF 14A,SEC EDGAR + Public Governance Reports
+MMM,3M Co.,Industrial,2024,11,3,0,0,1,9,85000,33,1,105,27.3,11.1,0,0,11.35,3.5,2025-03-26,DEF 14A,SEC EDGAR + Public Governance Reports
+UPS,United Parcel Service Inc.,Industrial,2024,12,5,1,0,3,10,500000,91,1,39,41.7,30.0,1,0,13.12,4.51,2025-03-17,DEF 14A,SEC EDGAR + Public Governance Reports
+XOM,Exxon Mobil Corp.,Energy,2024,12,3,0,0,1,10,62000,345,1,6,25.0,10.0,0,0,11.03,5.84,2025-04-07,DEF 14A,SEC EDGAR + Public Governance Reports
+CVX,Chevron Corp.,Energy,2024,12,4,0,0,1,9,43000,200,1,11,33.3,11.1,0,0,10.67,5.3,2025-04-09,DEF 14A,SEC EDGAR + Public Governance Reports
+COP,ConocoPhillips,Energy,2024,11,3,0,0,1,8,10500,58,1,76,27.3,12.5,0,0,9.26,4.06,2025-03-31,DEF 14A,SEC EDGAR + Public Governance Reports
+SLB,Schlumberger Ltd.,Energy,2024,11,3,0,0,0,8,99000,33,1,175,27.3,0.0,0,0,11.5,3.5,2026-02-26,DEF 14A,SEC EDGAR + Public Governance Reports
+DIS,Walt Disney Co.,Media,2024,12,4,0,0,2,10,225000,89,1,53,33.3,20.0,0,0,12.32,4.49,2026-01-22,DEF 14A,SEC EDGAR + Public Governance Reports
+NFLX,Netflix Inc.,Media,2024,11,4,0,0,2,8,13000,34,1,115,36.4,25.0,0,0,9.47,3.53,2025-04-17,DEF 14A,SEC EDGAR + Public Governance Reports
+CMCSA,Comcast Corp.,Media,2024,13,4,0,0,1,10,186000,121,1,24,30.8,10.0,0,0,12.13,4.8,2025-04-25,DEF 14A,SEC EDGAR + Public Governance Reports
+T,AT&T Inc.,Telecom,2024,12,4,0,0,1,10,150000,122,1,22,33.3,10.0,0,0,11.92,4.8,2025-04-04,DEF 14A,SEC EDGAR + Public Governance Reports
+VZ,Verizon Communications Inc.,Telecom,2024,11,4,0,0,2,10,105000,134,1,20,36.4,20.0,0,0,11.56,4.9,2025-04-07,DEF 14A,SEC EDGAR + Public Governance Reports
+TSLA,Tesla Inc.,Automotive,2024,8,2,0,1,1,7,140000,97,1,41,25.0,14.3,0,1,11.85,4.57,2025-09-17,DEF 14A,SEC EDGAR + Public Governance Reports
+GM,General Motors Co.,Automotive,2024,13,5,1,0,3,10,167000,172,1,14,38.5,30.0,1,0,12.03,5.15,2025-04-22,DEF 14A,SEC EDGAR + Public Governance Reports
+FDX,FedEx Corp.,Logistics,2024,13,4,0,0,1,10,530000,90,1,40,30.8,10.0,0,0,13.18,4.5,2025-08-18,DEF 14A,SEC EDGAR + Public Governance Reports
