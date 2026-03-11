@@ -1,51 +1,51 @@
-ticker,company,industry,year,board_size,women_on_board,female_ceo,female_cfo,female_cxo_count,c_suite_size,employees,revenue_bn,sp500,fortune500_rank,pct_women_board,pct_women_csuite,has_female_ceo,has_female_cfo,log_employees,log_revenue
-AAPL,Apple Inc.,Technology,2024,8,3,0,0,2,10,164000,383,1,3,37.5,20.0,0,0,12.01,5.95
-MSFT,Microsoft Corp.,Technology,2024,12,4,0,0,3,12,228000,245,1,13,33.3,25.0,0,0,12.34,5.5
-GOOG,Alphabet Inc.,Technology,2024,11,4,0,1,2,10,182000,307,1,8,36.4,20.0,0,1,12.11,5.73
-META,Meta Platforms Inc.,Technology,2024,9,3,0,1,2,8,67000,135,1,27,33.3,25.0,0,1,11.11,4.91
-NVDA,NVIDIA Corp.,Technology,2024,12,3,0,1,1,8,29600,61,1,97,25.0,12.5,0,1,10.3,4.11
-CRM,Salesforce Inc.,Technology,2024,12,4,0,0,2,10,73000,35,1,136,33.3,20.0,0,0,11.2,3.56
-ADBE,Adobe Inc.,Technology,2024,11,4,0,0,2,9,30000,20,1,226,36.4,22.2,0,0,10.31,3.0
-ORCL,Oracle Corp.,Technology,2024,14,5,1,0,2,9,164000,53,1,80,35.7,22.2,1,0,12.01,3.97
-IBM,IBM Corp.,Technology,2024,13,4,0,0,2,10,288000,62,1,63,30.8,20.0,0,0,12.57,4.13
-INTC,Intel Corp.,Technology,2024,11,3,0,0,1,10,124800,54,1,68,27.3,10.0,0,0,11.73,3.99
-JPM,JPMorgan Chase & Co.,Finance,2024,10,3,0,0,2,12,309000,158,1,19,30.0,16.7,0,0,12.64,5.06
-BAC,Bank of America Corp.,Finance,2024,15,5,0,0,3,11,213000,99,1,25,33.3,27.3,0,0,12.27,4.6
-GS,Goldman Sachs Group Inc.,Finance,2024,11,4,0,0,1,10,49000,46,1,55,36.4,10.0,0,0,10.8,3.83
-MS,Morgan Stanley,Finance,2024,14,5,0,0,2,10,82000,54,1,61,35.7,20.0,0,0,11.31,3.99
-C,Citigroup Inc.,Finance,2024,13,5,1,0,3,11,240000,78,1,33,38.5,27.3,1,0,12.39,4.36
-WFC,Wells Fargo & Co.,Finance,2024,12,4,0,0,2,10,234000,82,1,30,33.3,20.0,0,0,12.36,4.41
-BLK,BlackRock Inc.,Finance,2024,17,5,0,0,2,9,20000,18,1,238,29.4,22.2,0,0,9.9,2.89
-JNJ,Johnson & Johnson,Healthcare,2024,12,4,0,0,2,10,131900,85,1,37,33.3,20.0,0,0,11.79,4.44
-UNH,UnitedHealth Group Inc.,Healthcare,2024,12,4,0,0,2,10,400000,372,1,5,33.3,20.0,0,0,12.9,5.92
-PFE,Pfizer Inc.,Healthcare,2024,12,4,0,0,2,10,88000,58,1,42,33.3,20.0,0,0,11.39,4.06
-ABBV,AbbVie Inc.,Healthcare,2024,12,4,0,0,2,9,50000,54,1,64,33.3,22.2,0,0,10.82,3.99
-MRK,Merck & Co. Inc.,Healthcare,2024,12,5,0,1,3,10,69000,60,1,72,41.7,30.0,0,1,11.14,4.09
-LLY,Eli Lilly & Co.,Healthcare,2024,14,5,0,0,2,10,43000,34,1,102,35.7,20.0,0,0,10.67,3.53
-AMZN,Amazon.com Inc.,Consumer,2024,10,3,0,0,1,10,1525000,575,1,2,30.0,10.0,0,0,14.24,6.35
-WMT,Walmart Inc.,Consumer,2024,12,4,0,0,2,10,2100000,648,1,1,33.3,20.0,0,0,14.56,6.47
-PG,Procter & Gamble Co.,Consumer,2024,12,5,0,0,2,10,107000,84,1,28,41.7,20.0,0,0,11.58,4.43
-KO,Coca-Cola Co.,Consumer,2024,14,5,0,0,2,9,79000,46,1,87,35.7,22.2,0,0,11.28,3.83
-PEP,PepsiCo Inc.,Consumer,2024,13,5,0,0,2,10,318000,91,1,44,38.5,20.0,0,0,12.67,4.51
-NKE,Nike Inc.,Consumer,2024,12,4,0,0,2,9,79100,51,1,85,33.3,22.2,0,0,11.28,3.93
-SBUX,Starbucks Corp.,Consumer,2024,11,4,0,1,3,9,361000,36,1,114,36.4,33.3,0,1,12.8,3.58
-MCD,McDonald's Corp.,Consumer,2024,12,4,0,0,2,10,150000,25,1,152,33.3,20.0,0,0,11.92,3.22
-COST,Costco Wholesale Corp.,Consumer,2024,12,4,0,0,1,8,316000,254,1,10,33.3,12.5,0,0,12.66,5.54
-GE,General Electric Co.,Industrial,2024,10,3,0,0,1,9,125000,68,1,49,30.0,11.1,0,0,11.74,4.22
-CAT,Caterpillar Inc.,Industrial,2024,11,3,0,0,1,10,113200,67,1,52,27.3,10.0,0,0,11.64,4.2
-HON,Honeywell Intl Inc.,Industrial,2024,11,3,0,0,1,10,95000,37,1,100,27.3,10.0,0,0,11.46,3.61
-BA,Boeing Co.,Industrial,2024,12,3,0,0,1,10,170000,78,1,69,25.0,10.0,0,0,12.04,4.36
-MMM,3M Co.,Industrial,2024,11,3,0,0,1,9,85000,33,1,105,27.3,11.1,0,0,11.35,3.5
-UPS,United Parcel Service Inc.,Industrial,2024,12,5,1,0,3,10,500000,91,1,39,41.7,30.0,1,0,13.12,4.51
-XOM,Exxon Mobil Corp.,Energy,2024,12,3,0,0,1,10,62000,345,1,6,25.0,10.0,0,0,11.03,5.84
-CVX,Chevron Corp.,Energy,2024,12,4,0,0,1,9,43000,200,1,11,33.3,11.1,0,0,10.67,5.3
-COP,ConocoPhillips,Energy,2024,11,3,0,0,1,8,10500,58,1,76,27.3,12.5,0,0,9.26,4.06
-SLB,Schlumberger Ltd.,Energy,2024,11,3,0,0,0,8,99000,33,1,175,27.3,0.0,0,0,11.5,3.5
-DIS,Walt Disney Co.,Media,2024,12,4,0,0,2,10,225000,89,1,53,33.3,20.0,0,0,12.32,4.49
-NFLX,Netflix Inc.,Media,2024,11,4,0,0,2,8,13000,34,1,115,36.4,25.0,0,0,9.47,3.53
-CMCSA,Comcast Corp.,Media,2024,13,4,0,0,1,10,186000,121,1,24,30.8,10.0,0,0,12.13,4.8
-T,AT&T Inc.,Telecom,2024,12,4,0,0,1,10,150000,122,1,22,33.3,10.0,0,0,11.92,4.8
-VZ,Verizon Communications Inc.,Telecom,2024,11,4,0,0,2,10,105000,134,1,20,36.4,20.0,0,0,11.56,4.9
-TSLA,Tesla Inc.,Automotive,2024,8,2,0,1,1,7,140000,97,1,41,25.0,14.3,0,1,11.85,4.57
-GM,General Motors Co.,Automotive,2024,13,5,1,0,3,10,167000,172,1,14,38.5,30.0,1,0,12.03,5.15
-FDX,FedEx Corp.,Logistics,2024,13,4,0,0,1,10,530000,90,1,40,30.8,10.0,0,0,13.18,4.5
+ticker,company,industry,filing_date,ceo_name,ceo_gender,total_neos,female_neos,male_neos,unknown_neos,pct_female_neos,neo_names_json
+AAPL,Apple Inc.,Technology,2026-01-08,Mr. Cook,male,6,2,4,0,33.3,"[{""name"": ""Tim Cook"", ""gender"": ""male""}, {""name"": ""Kevan Parekh"", ""gender"": ""male""}, {""name"": ""Kate Adams"", ""gender"": ""female""}, {""name"": ""Sabih Khan"", ""gender"": ""male""}, {""name"": ""Luca Maestri"", ""gender"": ""male""}, {""name"": ""Deirdre O’Brien"", ""gender"": ""female""}]"
+MSFT,Microsoft Corp.,Technology,2025-10-21,,unknown,5,1,1,3,20.0,"[{""name"": ""Satya Nadella   Chairman"", ""gender"": ""male""}, {""name"": ""Amy E. Hood   Executive Vice President"", ""gender"": ""female""}, {""name"": ""Judson B. Althoff   Executive Vice President"", ""gender"": ""unknown""}, {""name"": ""Takeshi Numoto   Executive Vice President"", ""gender"": ""unknown""}, {""name"": ""Bradford L. Smith   Vice Chair"", ""gender"": ""unknown""}]"
+GOOG,Alphabet Inc.,Technology,2025-04-25,,unknown,6,1,1,4,16.7,"[{""name"": ""Sundar Pichai"", ""gender"": ""male""}, {""name"": ""Anat Ashkenazi"", ""gender"": ""unknown""}, {""name"": ""Ruth M. Porat"", ""gender"": ""female""}, {""name"": ""Prabhakar Raghavan"", ""gender"": ""unknown""}, {""name"": ""Philipp Schindler"", ""gender"": ""unknown""}, {""name"": ""Kent Walker"", ""gender"": ""unknown""}]"
+META,Meta Platforms Inc.,Technology,2025-04-17,Mark Zuckerberg,male,5,1,4,0,20.0,"[{""name"": ""Mark Zuckerberg"", ""gender"": ""male""}, {""name"": ""Susan Li"", ""gender"": ""female""}, {""name"": ""Christopher K. Cox"", ""gender"": ""male""}, {""name"": ""Javier Olivan"", ""gender"": ""male""}, {""name"": ""Andrew Bosworth"", ""gender"": ""male""}]"
+NVDA,NVIDIA Corp.,Technology,2025-05-13,Jen-Hsun Huang,male,2,0,0,2,0.0,"[{""name"": ""SY PSUs"", ""gender"": ""unknown""}, {""name"": ""MY PSUs"", ""gender"": ""unknown""}]"
+CRM,Salesforce Inc.,Technology,2025-04-24,Marc Benioff,male,5,1,3,1,20.0,"[{""name"": ""Marc Benioff"", ""gender"": ""male""}, {""name"": ""Amy Weaver"", ""gender"": ""female""}, {""name"": ""Parker Harris"", ""gender"": ""male""}, {""name"": ""Srinivas TallapragadaPresident"", ""gender"": ""unknown""}, {""name"": ""Brian Millham"", ""gender"": ""male""}]"
+ADBE,Adobe Inc.,Technology,2026-02-27,,unknown,6,1,4,1,16.7,"[{""name"": ""Shantanu Narayen"", ""gender"": ""male""}, {""name"": ""Daniel Durn"", ""gender"": ""male""}, {""name"": ""CFO AND EXECUTIVE VICE PRESIDENT"", ""gender"": ""unknown""}, {""name"": ""Anil Chakravarthy"", ""gender"": ""male""}, {""name"": ""David Wadhwani"", ""gender"": ""male""}, {""name"": ""Louise Pentland"", ""gender"": ""female""}]"
+ORCL,Oracle Corp.,Technology,2025-09-26,Safra A. Catz,female,7,2,4,1,28.6,"[{""name"": ""Lawrence J. Ellison"", ""gender"": ""male""}, {""name"": ""Technology Officer"", ""gender"": ""unknown""}, {""name"": ""Safra A. Catz"", ""gender"": ""female""}, {""name"": ""Jeffrey O. Henley"", ""gender"": ""male""}, {""name"": ""Stuart Levey"", ""gender"": ""male""}, {""name"": ""Maria Smith"", ""gender"": ""female""}, {""name"": ""Edward Screven"", ""gender"": ""male""}]"
+JPM,JPMorgan Chase & Co.,Finance,2025-04-07,James Dimon,male,5,1,4,0,20.0,"[{""name"": ""James Dimon"", ""gender"": ""male""}, {""name"": ""Daniel Pinto"", ""gender"": ""male""}, {""name"": ""Mary Callahan Erdoes"", ""gender"": ""female""}, {""name"": ""Troy Rohrbaugh"", ""gender"": ""male""}, {""name"": ""Jeremy Barnum"", ""gender"": ""male""}]"
+BAC,Bank of America Corp.,Finance,2025-03-10,Brian T. Moynihan.,male,5,0,5,0,0.0,"[{""name"": ""Brian T. Moynihan"", ""gender"": ""male""}, {""name"": ""Alastair M. Borthwick"", ""gender"": ""male""}, {""name"": ""Dean C. Athanasia"", ""gender"": ""male""}, {""name"": ""James P. DeMare"", ""gender"": ""male""}, {""name"": ""Matthew M. Koder"", ""gender"": ""male""}]"
+GS,Goldman Sachs Group Inc.,Finance,2025-03-14,Mr. Solomon,male,5,1,4,0,20.0,"[{""name"": ""David Solomon"", ""gender"": ""male""}, {""name"": ""John Waldron"", ""gender"": ""male""}, {""name"": ""Denis Coleman"", ""gender"": ""male""}, {""name"": ""Kathryn Ruemmler"", ""gender"": ""female""}, {""name"": ""John Rogers"", ""gender"": ""male""}]"
+MS,Morgan Stanley,Finance,2025-04-04,Edward Pick,male,0,0,0,0,0.0,[]
+C,Citigroup Inc.,Finance,2025-03-18,Ms. Fraser,female,0,0,0,0,0.0,[]
+WFC,Wells Fargo & Co.,Finance,2025-03-19,Mr. Scharf,male,5,1,4,0,20.0,"[{""name"": ""Charles W. Scharf"", ""gender"": ""male""}, {""name"": ""Michael P. Santomassimo"", ""gender"": ""male""}, {""name"": ""Jonathan G. Weiss"", ""gender"": ""male""}, {""name"": ""Fernando S Rivas"", ""gender"": ""male""}, {""name"": ""Bridget E. Engle"", ""gender"": ""female""}]"
+BLK,BlackRock Inc.,Finance,2025-04-04,Mr. Fink,male,5,0,5,0,0.0,"[{""name"": ""Laurence D. Fink"", ""gender"": ""male""}, {""name"": ""Robert S. Kapito"", ""gender"": ""male""}, {""name"": ""Robert L. Goldstein"", ""gender"": ""male""}, {""name"": ""Martin S. Small"", ""gender"": ""male""}, {""name"": ""J. Richard Kushel"", ""gender"": ""male""}]"
+JNJ,Johnson & Johnson,Healthcare,2026-03-11,J. Duato,male,5,1,3,1,20.0,"[{""name"": ""J. Duato"", ""gender"": ""male""}, {""name"": ""J. Wolk"", ""gender"": ""male""}, {""name"": ""J. Taubert"", ""gender"": ""female""}, {""name"": ""J. Reed"", ""gender"": ""unknown""}, {""name"": ""T. Schmid"", ""gender"": ""male""}]"
+UNH,UnitedHealth Group Inc.,Healthcare,2025-04-21,Andrew,male,6,1,4,1,16.7,"[{""name"": ""Andrew WittyChief Executive Officer"", ""gender"": ""male""}, {""name"": ""John RexPresident"", ""gender"": ""male""}, {""name"": ""Heather Cianfrocco"", ""gender"": ""female""}, {""name"": ""Christopher Zaetta"", ""gender"": ""male""}, {""name"": ""Erin McSweeney"", ""gender"": ""unknown""}, {""name"": ""Brian ThompsonFormer Executive Vice President"", ""gender"": ""male""}]"
+PFE,Pfizer Inc.,Healthcare,2025-03-13,Bourla,unknown,4,0,2,2,0.0,"[{""name"": ""A. Bourla"", ""gender"": ""unknown""}, {""name"": ""D. Denton"", ""gender"": ""male""}, {""name"": ""A. Malik"", ""gender"": ""male""}, {""name"": ""C. Boshoff"", ""gender"": ""unknown""}]"
+ABBV,AbbVie Inc.,Healthcare,2025-03-24,Mr. Michael,male,2,0,2,0,0.0,"[{""name"": ""Mr. Michael"", ""gender"": ""male""}, {""name"": ""Mr. Gonzalez"", ""gender"": ""male""}]"
+MRK,Merck & Co. Inc.,Healthcare,2025-04-09,Mr. Davis,male,6,2,2,2,33.3,"[{""name"": ""Robert M. Davis"", ""gender"": ""male""}, {""name"": ""Caroline Litchfield"", ""gender"": ""female""}, {""name"": ""Richard R. DeLuca, Jr."", ""gender"": ""male""}, {""name"": ""Betty Larson"", ""gender"": ""female""}, {""name"": ""Dean Li"", ""gender"": ""unknown""}, {""name"": ""Named Executive Officer"", ""gender"": ""unknown""}]"
+LLY,Eli Lilly & Co.,Healthcare,2025-03-21,,unknown,7,2,4,1,28.6,"[{""name"": ""Mr. Ricks"", ""gender"": ""male""}, {""name"": ""Mr. Montarce"", ""gender"": ""male""}, {""name"": ""Dr. Skovronsky"", ""gender"": ""unknown""}, {""name"": ""Ms. Hakim"", ""gender"": ""female""}, {""name"": ""Mr. Van Naarden"", ""gender"": ""male""}, {""name"": ""Mr. Brooks"", ""gender"": ""male""}, {""name"": ""Ms. Ashkenazi"", ""gender"": ""female""}]"
+AMZN,Amazon.com Inc.,Consumer,2025-04-10,Jeffrey P. Bezos,male,7,0,7,0,0.0,"[{""name"": ""Andrew R. JassyPresident"", ""gender"": ""male""}, {""name"": ""Jeffrey P. BezosFounder"", ""gender"": ""male""}, {""name"": ""Brian T. OlsavskySVP"", ""gender"": ""male""}, {""name"": ""Matthew S. GarmanCEO Amazon Web Services"", ""gender"": ""male""}, {""name"": ""Douglas J. HerringtonCEO Worldwide Amazon Stores"", ""gender"": ""male""}, {""name"": ""David A. ZapolskySVP"", ""gender"": ""male""}, {""name"": ""Adam N. SelipskyFormer CEO Amazon Web Services"", ""gender"": ""male""}]"
+WMT,Walmart Inc.,Consumer,2025-04-24,Doug McMillon,male,2,1,1,0,50.0,"[{""name"": ""Kath McLay"", ""gender"": ""female""}, {""name"": ""Chris Nicholas"", ""gender"": ""male""}]"
+PG,Procter & Gamble Co.,Consumer,2025-08-29,Mr. Moeller,male,5,1,1,3,20.0,"[{""name"": ""Jon R. Moeller Chairman"", ""gender"": ""unknown""}, {""name"": ""Andre Schulten Chief Financial Officer"", ""gender"": ""unknown""}, {""name"": ""Shailesh Jejurikar Chief Operating Officer"", ""gender"": ""unknown""}, {""name"": ""Jennifer L. Davis CEO"", ""gender"": ""female""}, {""name"": ""Sundar Raman"", ""gender"": ""male""}]"
+KO,Coca-Cola Co.,Consumer,2025-03-17,James Quincey,male,0,0,0,0,0.0,[]
+PEP,PepsiCo Inc.,Consumer,2025-03-28,Ramon L. Laguarta,male,1,1,0,0,100.0,"[{""name"": ""Becky Schmitt"", ""gender"": ""female""}]"
+NKE,Nike Inc.,Consumer,2025-07-17,Elliott Hill,male,8,2,4,2,25.0,"[{""name"": ""Elliott HillPresident"", ""gender"": ""unknown""}, {""name"": ""Matthew Friend"", ""gender"": ""male""}, {""name"": ""Robert Leinwand"", ""gender"": ""male""}, {""name"": ""Ann Miller"", ""gender"": ""female""}, {""name"": ""Craig Williams"", ""gender"": ""male""}, {""name"": ""John Donahoe II"", ""gender"": ""male""}, {""name"": ""Monique Matheson"", ""gender"": ""female""}, {""name"": ""Heidi O'Neill"", ""gender"": ""unknown""}]"
+SBUX,Starbucks Corp.,Consumer,2026-01-26,Brian Niccol,male,3,0,0,3,0.0,"[{""name"": ""Replacement Equity Grants"", ""gender"": ""unknown""}, {""name"": ""Other Executive Benefits"", ""gender"": ""unknown""}, {""name"": ""Signing Bonus"", ""gender"": ""unknown""}]"
+MCD,McDonald's Corp.,Consumer,2025-04-07,Mr. Kempczinski,male,0,0,0,0,0.0,[]
+COST,Costco Wholesale Corp.,Consumer,2025-12-04,Ron M. Vachris,male,6,0,6,0,0.0,"[{""name"": ""Ron M. Vachris"", ""gender"": ""male""}, {""name"": ""Gary Millerchip"", ""gender"": ""male""}, {""name"": ""Russ D. Miller"", ""gender"": ""male""}, {""name"": ""Pierre Riel"", ""gender"": ""male""}, {""name"": ""Javier Polit"", ""gender"": ""male""}, {""name"": ""Richard A. Galanti"", ""gender"": ""male""}]"
+GE,General Electric Co.,Industrial,2025-03-13,"H.     Lawrence Culp, Jr.",unknown,0,0,0,0,0.0,[]
+CAT,Caterpillar Inc.,Industrial,2025-04-30,D. James Umpleby II,unknown,0,0,0,0,0.0,[]
+HON,Honeywell Intl Inc.,Industrial,2025-04-09,Vimal Kapur,male,5,1,4,0,20.0,"[{""name"": ""Vimal Kapur"", ""gender"": ""male""}, {""name"": ""Gregory P. Lewis"", ""gender"": ""male""}, {""name"": ""Anne T. Madden"", ""gender"": ""female""}, {""name"": ""Lucian Boldea"", ""gender"": ""male""}, {""name"": ""James Currier"", ""gender"": ""male""}]"
+BA,Boeing Co.,Industrial,2026-03-06,Robert K. Ortberg,male,6,1,3,2,16.7,"[{""name"": ""Robert K. Ortberg"", ""gender"": ""male""}, {""name"": ""Jesus Malave, Jr."", ""gender"": ""unknown""}, {""name"": ""Stephanie F. Pope"", ""gender"": ""female""}, {""name"": ""Brett C. Gerry Chief Legal Officer"", ""gender"": ""unknown""}, {""name"": ""Jeffrey S. Shockey"", ""gender"": ""male""}, {""name"": ""Brian J. West Former Chief Financial Officer"", ""gender"": ""male""}]"
+MMM,3M Co.,Industrial,2025-03-26,(1)William M. Brown,male,2,0,2,0,0.0,"[{""name"": ""(1)William M. Brown"", ""gender"": ""male""}, {""name"": ""Michael F. Roman"", ""gender"": ""male""}]"
+UPS,United Parcel Service Inc.,Industrial,2025-03-17,Carol Tomé,female,2,1,1,0,50.0,"[{""name"": ""David Abney"", ""gender"": ""male""}, {""name"": ""Carol Tomé"", ""gender"": ""female""}]"
+XOM,Exxon Mobil Corp.,Energy,2025-04-07,D.W. Woods,male,0,0,0,0,0.0,[]
+CVX,Chevron Corp.,Energy,2025-04-09,Mr. Wirth,male,5,1,4,0,20.0,"[{""name"": ""Michael K. Wirth"", ""gender"": ""male""}, {""name"": ""Eimear P. Bonner"", ""gender"": ""female""}, {""name"": ""Mark A. Nelson"", ""gender"": ""male""}, {""name"": ""A. Nigel Hearne"", ""gender"": ""male""}, {""name"": ""R. Hewitt Pate"", ""gender"": ""male""}]"
+COP,ConocoPhillips,Energy,2025-03-31,Lance,male,0,0,0,0,0.0,[]
+SLB,Schlumberger Ltd.,Energy,2026-02-26,Mr. Le Peuch,male,0,0,0,0,0.0,[]
+DIS,Walt Disney Co.,Media,2026-01-22,Mr. Iger,male,4,1,3,0,25.0,"[{""name"": ""Robert A. Iger"", ""gender"": ""male""}, {""name"": ""Hugh F. Johnston"", ""gender"": ""male""}, {""name"": ""Horacio E. Gutierrez"", ""gender"": ""male""}, {""name"": ""Kristina K. Schake"", ""gender"": ""female""}]"
+NFLX,Netflix Inc.,Media,2025-04-17,Reed Hastings,male,5,0,4,1,0.0,"[{""name"": ""TED SARANDOS"", ""gender"": ""male""}, {""name"": ""GREG PETERS"", ""gender"": ""male""}, {""name"": ""REED HASTINGS"", ""gender"": ""male""}, {""name"": ""SPENCER NEUMANN Chief Financial Officer"", ""gender"": ""unknown""}, {""name"": ""DAVID HYMAN Chief Legal Officer"", ""gender"": ""male""}]"
+CMCSA,Comcast Corp.,Media,2025-04-25,Mr. Roberts,male,0,0,0,0,0.0,[]
+T,AT&T Inc.,Telecom,2025-04-04,John Stankey,male,2,0,2,0,0.0,"[{""name"": ""John Stankey"", ""gender"": ""male""}, {""name"": ""Randall Stephenson"", ""gender"": ""male""}]"
+VZ,Verizon Communications Inc.,Telecom,2025-04-07,Mr. Vestberg,male,0,0,0,0,0.0,[]
+TSLA,Tesla Inc.,Automotive,2025-09-17,Mr. Musk,male,1,0,1,0,0.0,"[{""name"": ""Elon Musk"", ""gender"": ""male""}]"
+GM,General Motors Co.,Automotive,2025-04-22,Ms. Barra,female,6,1,5,0,16.7,"[{""name"": ""Mary T. BarraChair"", ""gender"": ""female""}, {""name"": ""Paul A. JacobsonExecutive VicePresident"", ""gender"": ""male""}, {""name"": ""Mark L. ReussPresident"", ""gender"": ""male""}, {""name"": ""Michael AbbottAdvisor"", ""gender"": ""male""}, {""name"": ""Craig B. GliddenStrategic Advisorand FormerExecutive VicePresident"", ""gender"": ""male""}, {""name"": ""Rory V. HarveyExecutive VicePresident"", ""gender"": ""male""}]"
+FDX,FedEx Corp.,Logistics,2025-08-18,Mr. Subramaniam,male,5,1,3,1,20.0,"[{""name"": ""Rajesh SubramaniamPresident"", ""gender"": ""unknown""}, {""name"": ""John W. Dietrich"", ""gender"": ""male""}, {""name"": ""Sriram Krishnasamy"", ""gender"": ""male""}, {""name"": ""John A. Smith"", ""gender"": ""male""}, {""name"": ""Brie A. Carere"", ""gender"": ""female""}]"
+IBM,IBM Corp.,Technology,2026-03-10,Mr. Krishna,male,5,1,4,0,20.0,"[{""name"": ""A. Krishna"", ""gender"": ""male""}, {""name"": ""J.J. Kavanaugh"", ""gender"": ""male""}, {""name"": ""R.D. Thomas"", ""gender"": ""male""}, {""name"": ""G. Cohn"", ""gender"": ""male""}, {""name"": ""A. Robinson"", ""gender"": ""female""}]"
+INTC,Intel Corp.,Technology,2025-03-27,Ms. Johnston Holthaus,female,6,0,0,6,0.0,"[{""name"": ""Pay Element"", ""gender"": ""unknown""}, {""name"": ""Base Salary"", ""gender"": ""unknown""}, {""name"": ""Performance Stock Units"", ""gender"": ""unknown""}, {""name"": ""Nonqualified Stock Options"", ""gender"": ""unknown""}, {""name"": ""New Hire"", ""gender"": ""unknown""}, {""name"": ""New Hire PSUs"", ""gender"": ""unknown""}]"

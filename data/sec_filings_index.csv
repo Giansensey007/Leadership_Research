@@ -14,7 +14,7 @@ MS,Morgan Stanley,Finance,2025-04-04,DEF 14A,SEC EDGAR
 C,Citigroup Inc.,Finance,2025-03-18,DEF 14A,SEC EDGAR
 WFC,Wells Fargo & Co.,Finance,2025-03-19,DEF 14A,SEC EDGAR
 BLK,BlackRock Inc.,Finance,2025-04-04,DEF 14A,SEC EDGAR
-JNJ,Johnson & Johnson,Healthcare,2025-03-12,DEF 14A,SEC EDGAR
+JNJ,Johnson & Johnson,Healthcare,2026-03-11,DEF 14A,SEC EDGAR
 UNH,UnitedHealth Group Inc.,Healthcare,2025-04-21,DEF 14A,SEC EDGAR
 PFE,Pfizer Inc.,Healthcare,2025-03-13,DEF 14A,SEC EDGAR
 ABBV,AbbVie Inc.,Healthcare,2025-03-24,DEF 14A,SEC EDGAR
@@ -32,7 +32,7 @@ COST,Costco Wholesale Corp.,Consumer,2025-12-04,DEF 14A,SEC EDGAR
 GE,General Electric Co.,Industrial,2025-03-13,DEF 14A,SEC EDGAR
 CAT,Caterpillar Inc.,Industrial,2025-04-30,DEF 14A,SEC EDGAR
 HON,Honeywell Intl Inc.,Industrial,2025-04-09,DEF 14A,SEC EDGAR
-BA,Boeing Co.,Industrial,2025-03-07,DEF 14A,SEC EDGAR
+BA,Boeing Co.,Industrial,2026-03-06,DEF 14A,SEC EDGAR
 MMM,3M Co.,Industrial,2025-03-26,DEF 14A,SEC EDGAR
 UPS,United Parcel Service Inc.,Industrial,2025-03-17,DEF 14A,SEC EDGAR
 XOM,Exxon Mobil Corp.,Energy,2025-04-07,DEF 14A,SEC EDGAR
@@ -47,5 +47,5 @@ VZ,Verizon Communications Inc.,Telecom,2025-04-07,DEF 14A,SEC EDGAR
 TSLA,Tesla Inc.,Automotive,2025-09-17,DEF 14A,SEC EDGAR
 GM,General Motors Co.,Automotive,2025-04-22,DEF 14A,SEC EDGAR
 FDX,FedEx Corp.,Logistics,2025-08-18,DEF 14A,SEC EDGAR
-IBM,IBM Corp.,Technology,2025-03-10,DEF 14A,SEC EDGAR
+IBM,IBM Corp.,Technology,2026-03-10,DEF 14A,SEC EDGAR
 INTC,Intel Corp.,Technology,2025-03-27,DEF 14A,SEC EDGAR

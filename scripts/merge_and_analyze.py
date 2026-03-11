@@ -2,9 +2,13 @@
 """
 Merge leadership gender dataset with SEC filing index and produce
 summary statistics and an analysis-ready dataset.
+
+Expects the new schema from collect_sec_data.py:
+  leadership_gender_data.csv: ticker, company, industry, filing_date,
+    ceo_name, ceo_gender, total_neos, female_neos, male_neos,
+    unknown_neos, pct_female_neos, neo_names_json
 """
 import csv
-import os
 from pathlib import Path
 from collections import defaultdict
 
@@ -32,7 +36,7 @@ def merge_datasets():
         merged_row = {**row}
         merged_row["sec_filing_date"] = sec_info.get("filing_date", "")
         merged_row["sec_filing_type"] = sec_info.get("filing_type", "")
-        merged_row["data_source"] = "SEC EDGAR + Public Governance Reports"
+        merged_row["data_source"] = "SEC EDGAR DEF 14A"
         merged.append(merged_row)
 
     return merged
@@ -42,9 +46,8 @@ def compute_summary_statistics(dataset):
     """Compute descriptive statistics for the dataset."""
     n = len(dataset)
     numeric_fields = [
-        "board_size", "women_on_board", "pct_women_board",
-        "female_cxo_count", "c_suite_size", "pct_women_csuite",
-        "employees", "revenue_bn"
+        "total_neos", "female_neos", "male_neos",
+        "unknown_neos", "pct_female_neos",
     ]
 
     stats = {}
@@ -60,33 +63,36 @@ def compute_summary_statistics(dataset):
                 "median": round(median, 2),
                 "min": round(min(values), 2),
                 "max": round(max(values), 2),
-                "sd": round((sum((x - mean)**2 for x in values) / len(values))**0.5, 2),
+                "sd": round(
+                    (sum((x - mean) ** 2 for x in values) / len(values)) ** 0.5, 2
+                ),
             }
 
-    # Industry breakdown
     by_industry = defaultdict(list)
     for row in dataset:
-        by_industry[row["industry"]].append(float(row["pct_women_board"]))
+        val = row.get("pct_female_neos")
+        if val:
+            by_industry[row["industry"]].append(float(val))
 
     industry_stats = {}
     for industry, values in by_industry.items():
         industry_stats[industry] = {
             "n": len(values),
-            "mean_pct_women_board": round(sum(values) / len(values), 1),
+            "mean_pct_female_neos": round(sum(values) / len(values), 1),
         }
 
-    # Female CEO/CFO counts
-    female_ceo_count = sum(1 for row in dataset if int(row["female_ceo"]) == 1)
-    female_cfo_count = sum(1 for row in dataset if int(row["female_cfo"]) == 1)
+    female_ceo_count = sum(
+        1 for row in dataset if row.get("ceo_gender", "").lower() == "female"
+    )
 
-    return stats, industry_stats, female_ceo_count, female_cfo_count
+    return stats, industry_stats, female_ceo_count
 
 
 def save_merged_csv(dataset, filename):
     filepath = DATA_DIR / filename
     if not dataset:
         return
-    fieldnames = dataset[0].keys()
+    fieldnames = list(dataset[0].keys())
     with open(filepath, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -94,28 +100,35 @@ def save_merged_csv(dataset, filename):
     print(f"Saved merged dataset: {filepath} ({len(dataset)} rows)")
 
 
-def print_summary(stats, industry_stats, female_ceo_count, female_cfo_count, n):
-    print("\n" + "=" * 60)
-    print("DESCRIPTIVE STATISTICS")
-    print("=" * 60)
+def print_summary(stats, industry_stats, female_ceo_count, n):
+    print("\n" + "=" * 65)
+    print("DESCRIPTIVE STATISTICS  --  NEO Gender Composition")
+    print("=" * 65)
     print(f"\nSample size: N = {n} S&P 500 companies\n")
 
-    print(f"{'Variable':<25} {'Mean':>8} {'Median':>8} {'SD':>8} {'Min':>8} {'Max':>8}")
+    print(
+        f"{'Variable':<25} {'Mean':>8} {'Median':>8} "
+        f"{'SD':>8} {'Min':>8} {'Max':>8}"
+    )
     print("-" * 75)
     for field, s in stats.items():
         label = field.replace("_", " ").title()
-        print(f"{label:<25} {s['mean']:>8.1f} {s['median']:>8.1f} {s['sd']:>8.1f} {s['min']:>8.1f} {s['max']:>8.1f}")
+        print(
+            f"{label:<25} {s['mean']:>8.1f} {s['median']:>8.1f} "
+            f"{s['sd']:>8.1f} {s['min']:>8.1f} {s['max']:>8.1f}"
+        )
 
-    print(f"\nFemale CEOs: {female_ceo_count}/{n} ({female_ceo_count/n*100:.0f}%)")
-    print(f"Female CFOs: {female_cfo_count}/{n} ({female_cfo_count/n*100:.0f}%)")
+    print(f"\nFemale CEOs: {female_ceo_count}/{n} ({female_ceo_count / n * 100:.0f}%)")
 
-    print("\n" + "-" * 50)
-    print("BOARD GENDER DIVERSITY BY INDUSTRY")
-    print("-" * 50)
-    print(f"{'Industry':<20} {'N':>5} {'Mean % Women Board':>20}")
-    print("-" * 50)
-    for industry, s in sorted(industry_stats.items(), key=lambda x: -x[1]["mean_pct_women_board"]):
-        print(f"{industry:<20} {s['n']:>5} {s['mean_pct_women_board']:>19.1f}%")
+    print("\n" + "-" * 55)
+    print("NEO GENDER DIVERSITY BY INDUSTRY")
+    print("-" * 55)
+    print(f"{'Industry':<20} {'N':>5} {'Mean % Female NEOs':>22}")
+    print("-" * 55)
+    for industry, s in sorted(
+        industry_stats.items(), key=lambda x: -x[1]["mean_pct_female_neos"]
+    ):
+        print(f"{industry:<20} {s['n']:>5} {s['mean_pct_female_neos']:>21.1f}%")
 
 
 if __name__ == "__main__":
@@ -123,5 +136,5 @@ if __name__ == "__main__":
     merged = merge_datasets()
     save_merged_csv(merged, "merged_leadership_data.csv")
 
-    stats, industry_stats, ceo_count, cfo_count = compute_summary_statistics(merged)
-    print_summary(stats, industry_stats, ceo_count, cfo_count, len(merged))
+    stats, industry_stats, ceo_count = compute_summary_statistics(merged)
+    print_summary(stats, industry_stats, ceo_count, len(merged))
