@@ -1,51 +1,501 @@
 ticker,company_name,industry,filing_date,filing_type,source
-AAPL,Apple Inc.,Technology,2026-01-08,DEF 14A,SEC EDGAR
-MSFT,Microsoft Corp.,Technology,2025-10-21,DEF 14A,SEC EDGAR
-GOOG,Alphabet Inc.,Technology,2025-04-25,DEF 14A,SEC EDGAR
-META,Meta Platforms Inc.,Technology,2025-04-17,DEF 14A,SEC EDGAR
-NVDA,NVIDIA Corp.,Technology,2025-05-13,DEF 14A,SEC EDGAR
-CRM,Salesforce Inc.,Technology,2025-04-24,DEF 14A,SEC EDGAR
-ADBE,Adobe Inc.,Technology,2026-02-27,DEF 14A,SEC EDGAR
-ORCL,Oracle Corp.,Technology,2025-09-26,DEF 14A,SEC EDGAR
-JPM,JPMorgan Chase & Co.,Finance,2025-04-07,DEF 14A,SEC EDGAR
-BAC,Bank of America Corp.,Finance,2025-03-10,DEF 14A,SEC EDGAR
-GS,Goldman Sachs Group Inc.,Finance,2025-03-14,DEF 14A,SEC EDGAR
-MS,Morgan Stanley,Finance,2025-04-04,DEF 14A,SEC EDGAR
-C,Citigroup Inc.,Finance,2025-03-18,DEF 14A,SEC EDGAR
-WFC,Wells Fargo & Co.,Finance,2025-03-19,DEF 14A,SEC EDGAR
-BLK,BlackRock Inc.,Finance,2025-04-04,DEF 14A,SEC EDGAR
-JNJ,Johnson & Johnson,Healthcare,2026-03-11,DEF 14A,SEC EDGAR
-UNH,UnitedHealth Group Inc.,Healthcare,2025-04-21,DEF 14A,SEC EDGAR
-PFE,Pfizer Inc.,Healthcare,2025-03-13,DEF 14A,SEC EDGAR
-ABBV,AbbVie Inc.,Healthcare,2025-03-24,DEF 14A,SEC EDGAR
-MRK,Merck & Co. Inc.,Healthcare,2025-04-09,DEF 14A,SEC EDGAR
-LLY,Eli Lilly & Co.,Healthcare,2025-03-21,DEF 14A,SEC EDGAR
-AMZN,Amazon.com Inc.,Consumer,2025-04-10,DEF 14A,SEC EDGAR
-WMT,Walmart Inc.,Consumer,2025-04-24,DEF 14A,SEC EDGAR
-PG,Procter & Gamble Co.,Consumer,2025-08-29,DEF 14A,SEC EDGAR
-KO,Coca-Cola Co.,Consumer,2025-03-17,DEF 14A,SEC EDGAR
-PEP,PepsiCo Inc.,Consumer,2025-03-28,DEF 14A,SEC EDGAR
-NKE,Nike Inc.,Consumer,2025-07-17,DEF 14A,SEC EDGAR
-SBUX,Starbucks Corp.,Consumer,2026-01-26,DEF 14A,SEC EDGAR
-MCD,McDonald's Corp.,Consumer,2025-04-07,DEF 14A,SEC EDGAR
-COST,Costco Wholesale Corp.,Consumer,2025-12-04,DEF 14A,SEC EDGAR
-GE,General Electric Co.,Industrial,2025-03-13,DEF 14A,SEC EDGAR
-CAT,Caterpillar Inc.,Industrial,2025-04-30,DEF 14A,SEC EDGAR
-HON,Honeywell Intl Inc.,Industrial,2025-04-09,DEF 14A,SEC EDGAR
-BA,Boeing Co.,Industrial,2026-03-06,DEF 14A,SEC EDGAR
-MMM,3M Co.,Industrial,2025-03-26,DEF 14A,SEC EDGAR
-UPS,United Parcel Service Inc.,Industrial,2025-03-17,DEF 14A,SEC EDGAR
-XOM,Exxon Mobil Corp.,Energy,2025-04-07,DEF 14A,SEC EDGAR
-CVX,Chevron Corp.,Energy,2025-04-09,DEF 14A,SEC EDGAR
+A,Agilent Technologies,Health Care,2026-02-06,DEF 14A,SEC EDGAR
+AAPL,Apple Inc.,Information Technology,2026-01-08,DEF 14A,SEC EDGAR
+ABBV,AbbVie,Health Care,2025-03-24,DEF 14A,SEC EDGAR
+ABNB,Airbnb,Consumer Discretionary,2025-04-25,DEF 14A,SEC EDGAR
+ABT,Abbott Laboratories,Health Care,2026-03-13,DEF 14A,SEC EDGAR
+ACGL,Arch Capital Group,Financials,2025-03-25,DEF 14A,SEC EDGAR
+ACN,Accenture,Information Technology,2025-12-12,DEF 14A,SEC EDGAR
+ADBE,Adobe Inc.,Information Technology,2026-02-27,DEF 14A,SEC EDGAR
+ADI,Analog Devices,Information Technology,2026-01-23,DEF 14A,SEC EDGAR
+ADM,Archer Daniels Midland,Consumer Staples,2025-03-25,DEF 14A,SEC EDGAR
+ADP,Automatic Data Processing,Industrials,2025-09-25,DEF 14A,SEC EDGAR
+ADSK,Autodesk,Information Technology,2025-05-06,DEF 14A,SEC EDGAR
+AEE,Ameren,Utilities,2025-03-25,DEF 14A,SEC EDGAR
+AEP,American Electric Power,Utilities,2026-03-18,DEF 14A,SEC EDGAR
+AES,AES Corporation,Utilities,2026-03-20,DEF 14A,SEC EDGAR
+AFL,Aflac,Financials,2026-03-19,DEF 14A,SEC EDGAR
+AIG,American International Group,Financials,2025-04-02,DEF 14A,SEC EDGAR
+AIZ,Assurant,Financials,2025-04-08,DEF 14A,SEC EDGAR
+AJG,Arthur J. Gallagher & Co.,Financials,2025-03-24,DEF 14A,SEC EDGAR
+AKAM,Akamai Technologies,Information Technology,2025-04-01,DEF 14A,SEC EDGAR
+ALB,Albemarle Corporation,Materials,2025-03-27,DEF 14A,SEC EDGAR
+ALGN,Align Technology,Health Care,2025-04-08,DEF 14A,SEC EDGAR
+ALL,Allstate,Financials,2025-04-17,DEF 14A,SEC EDGAR
+ALLE,Allegion,Industrials,2025-04-18,DEF 14A,SEC EDGAR
+AMAT,Applied Materials,Information Technology,2026-01-28,DEF 14A,SEC EDGAR
+AMCR,Amcor,Materials,2025-09-23,DEF 14A,SEC EDGAR
+AMD,Advanced Micro Devices,Information Technology,2025-03-28,DEF 14A,SEC EDGAR
+AME,Ametek,Industrials,2026-03-11,DEF 14A,SEC EDGAR
+AMGN,Amgen,Health Care,2025-04-09,DEF 14A,SEC EDGAR
+AMP,Ameriprise Financial,Financials,2026-03-20,DEF 14A,SEC EDGAR
+AMT,American Tower,Real Estate,2025-04-02,DEF 14A,SEC EDGAR
+AMZN,Amazon,Consumer Discretionary,2025-04-10,DEF 14A,SEC EDGAR
+ANET,Arista Networks,Information Technology,2025-04-16,DEF 14A,SEC EDGAR
+AON,Aon plc,Financials,2025-04-28,DEF 14A,SEC EDGAR
+AOS,A. O. Smith,Industrials,2026-03-04,DEF 14A,SEC EDGAR
+APA,APA Corporation,Energy,2025-04-10,DEF 14A,SEC EDGAR
+APD,Air Products,Materials,2025-12-11,DEF 14A,SEC EDGAR
+APH,Amphenol,Information Technology,2025-04-04,DEF 14A,SEC EDGAR
+APO,Apollo Global Management,Financials,2025-04-25,DEF 14A,SEC EDGAR
+APP,AppLovin,Information Technology,2025-04-22,DEF 14A,SEC EDGAR
+APTV,Aptiv,Consumer Discretionary,2026-03-16,DEF 14A,SEC EDGAR
+ARE,Alexandria Real Estate Equities,Real Estate,2025-04-02,DEF 14A,SEC EDGAR
+ARES,Ares Management,Financials,2025-04-16,DEF 14A,SEC EDGAR
+ATO,Atmos Energy,Utilities,2025-12-19,DEF 14A,SEC EDGAR
+AVB,AvalonBay Communities,Real Estate,2025-04-02,DEF 14A,SEC EDGAR
+AVGO,Broadcom,Information Technology,2026-03-02,DEF 14A,SEC EDGAR
+AVY,Avery Dennison,Materials,2026-03-12,DEF 14A,SEC EDGAR
+AWK,American Water Works,Utilities,2025-03-27,DEF 14A,SEC EDGAR
+AXON,Axon Enterprise,Industrials,2025-04-16,DEF 14A,SEC EDGAR
+AXP,American Express,Financials,2025-03-14,DEF 14A,SEC EDGAR
+AZO,AutoZone,Consumer Discretionary,2025-10-28,DEF 14A,SEC EDGAR
+BA,Boeing,Industrials,2026-03-06,DEF 14A,SEC EDGAR
+BAC,Bank of America,Financials,2026-03-23,DEF 14A,SEC EDGAR
+BALL,Ball Corporation,Materials,2026-03-17,DEF 14A,SEC EDGAR
+BAX,Baxter International,Health Care,2026-03-23,DEF 14A,SEC EDGAR
+BBY,Best Buy,Consumer Discretionary,2025-05-01,DEF 14A,SEC EDGAR
+BDX,Becton Dickinson,Health Care,2025-12-18,DEF 14A,SEC EDGAR
+BEN,Franklin Resources,Financials,2025-12-22,DEF 14A,SEC EDGAR
+BF-B,Brown–Forman,Consumer Staples,2025-06-20,DEF 14A,SEC EDGAR
+BG,Bunge Global,Consumer Staples,2025-04-04,DEF 14A,SEC EDGAR
+BIIB,Biogen,Health Care,2025-04-28,DEF 14A,SEC EDGAR
+BK,BNY Mellon,Financials,2026-03-05,DEF 14A,SEC EDGAR
+BKNG,Booking Holdings,Consumer Discretionary,2025-04-22,DEF 14A,SEC EDGAR
+BKR,Baker Hughes,Energy,2025-03-31,DEF 14A,SEC EDGAR
+BLDR,Builders FirstSource,Industrials,2025-04-15,DEF 14A,SEC EDGAR
+BLK,BlackRock,Financials,2025-04-04,DEF 14A,SEC EDGAR
+BMY,Bristol Myers Squibb,Health Care,2025-03-26,DEF 14A,SEC EDGAR
+BR,Broadridge Financial Solutions,Industrials,2025-10-02,DEF 14A,SEC EDGAR
+BRK-B,Berkshire Hathaway,Financials,2026-03-13,DEF 14A,SEC EDGAR
+BRO,Brown & Brown,Financials,2025-03-24,DEF 14A,SEC EDGAR
+BSX,Boston Scientific,Health Care,2026-03-18,DEF 14A,SEC EDGAR
+BXP,"BXP, Inc.",Real Estate,2025-04-09,DEF 14A,SEC EDGAR
+C,Citigroup,Financials,2025-03-18,DEF 14A,SEC EDGAR
+CAG,Conagra Brands,Consumer Staples,2025-08-06,DEF 14A,SEC EDGAR
+CAH,Cardinal Health,Health Care,2025-09-16,DEF 14A,SEC EDGAR
+CARR,Carrier Global,Industrials,2026-03-03,DEF 14A,SEC EDGAR
+CAT,Caterpillar Inc.,Industrials,2025-04-30,DEF 14A,SEC EDGAR
+CB,Chubb Limited,Financials,2025-04-01,DEF 14A,SEC EDGAR
+CBOE,Cboe Global Markets,Financials,2025-04-03,DEF 14A,SEC EDGAR
+CBRE,CBRE Group,Real Estate,2025-04-04,DEF 14A,SEC EDGAR
+CCI,Crown Castle,Real Estate,2025-04-07,DEF 14A,SEC EDGAR
+CCL,Carnival,Consumer Discretionary,2026-02-27,DEF 14A,SEC EDGAR
+CDNS,Cadence Design Systems,Information Technology,2025-03-25,DEF 14A,SEC EDGAR
+CDW,CDW Corporation,Information Technology,2025-04-09,DEF 14A,SEC EDGAR
+CEG,Constellation Energy,Utilities,2026-03-19,DEF 14A,SEC EDGAR
+CF,CF Industries,Materials,2026-03-17,DEF 14A,SEC EDGAR
+CFG,Citizens Financial Group,Financials,2026-03-09,DEF 14A,SEC EDGAR
+CHD,Church & Dwight,Consumer Staples,2026-03-19,DEF 14A,SEC EDGAR
+CHRW,C.H. Robinson,Industrials,2025-03-25,DEF 14A,SEC EDGAR
+CHTR,Charter Communications,Communication Services,2026-03-12,DEF 14A,SEC EDGAR
+CI,Cigna,Health Care,2026-03-13,DEF 14A,SEC EDGAR
+CIEN,Ciena,Information Technology,2026-02-12,DEF 14A,SEC EDGAR
+CINF,Cincinnati Financial,Financials,2026-03-18,DEF 14A,SEC EDGAR
+CL,Colgate-Palmolive,Consumer Staples,2025-03-26,DEF 14A,SEC EDGAR
+CLX,Clorox,Consumer Staples,2025-10-07,DEF 14A,SEC EDGAR
+CMCSA,Comcast,Communication Services,2025-04-25,DEF 14A,SEC EDGAR
+CME,CME Group,Financials,2025-03-20,DEF 14A,SEC EDGAR
+CMG,Chipotle Mexican Grill,Consumer Discretionary,2025-04-25,DEF 14A,SEC EDGAR
+CMI,Cummins,Industrials,2025-03-31,DEF 14A,SEC EDGAR
+CMS,CMS Energy,Utilities,2025-03-20,DEF 14A,SEC EDGAR
+CNC,Centene Corporation,Health Care,2025-03-27,DEF 14A,SEC EDGAR
+CNP,CenterPoint Energy,Utilities,2026-03-04,DEF 14A,SEC EDGAR
+COF,Capital One,Financials,2025-03-27,DEF 14A,SEC EDGAR
+COIN,Coinbase,Financials,2025-04-25,DEF 14A,SEC EDGAR
+COO,Cooper Companies (The),Health Care,2026-02-24,DEF 14A,SEC EDGAR
 COP,ConocoPhillips,Energy,2025-03-31,DEF 14A,SEC EDGAR
-SLB,Schlumberger Ltd.,Energy,2026-02-26,DEF 14A,SEC EDGAR
-DIS,Walt Disney Co.,Media,2026-01-22,DEF 14A,SEC EDGAR
-NFLX,Netflix Inc.,Media,2025-04-17,DEF 14A,SEC EDGAR
-CMCSA,Comcast Corp.,Media,2025-04-25,DEF 14A,SEC EDGAR
-T,AT&T Inc.,Telecom,2025-04-04,DEF 14A,SEC EDGAR
-VZ,Verizon Communications Inc.,Telecom,2025-04-07,DEF 14A,SEC EDGAR
-TSLA,Tesla Inc.,Automotive,2025-09-17,DEF 14A,SEC EDGAR
-GM,General Motors Co.,Automotive,2025-04-22,DEF 14A,SEC EDGAR
-FDX,FedEx Corp.,Logistics,2025-08-18,DEF 14A,SEC EDGAR
-IBM,IBM Corp.,Technology,2026-03-10,DEF 14A,SEC EDGAR
-INTC,Intel Corp.,Technology,2025-03-27,DEF 14A,SEC EDGAR
+COR,Cencora,Health Care,2026-01-22,DEF 14A,SEC EDGAR
+COST,Costco,Consumer Staples,2025-12-04,DEF 14A,SEC EDGAR
+CPAY,Corpay,Financials,2025-04-30,DEF 14A,SEC EDGAR
+CPB,Campbell's Company (The),Consumer Staples,2025-10-08,DEF 14A,SEC EDGAR
+CPRT,Copart,Industrials,2025-10-24,DEF 14A,SEC EDGAR
+CPT,Camden Property Trust,Real Estate,2025-03-25,DEF 14A,SEC EDGAR
+CRH,CRH plc,Materials,2025-03-28,DEF 14A,SEC EDGAR
+CRL,Charles River Laboratories,Health Care,2025-04-02,DEF 14A,SEC EDGAR
+CRM,Salesforce,Information Technology,2025-04-24,DEF 14A,SEC EDGAR
+CRWD,CrowdStrike,Information Technology,2025-05-06,DEF 14A,SEC EDGAR
+CSCO,Cisco,Information Technology,2025-10-28,DEF 14A,SEC EDGAR
+CSGP,CoStar Group,Real Estate,2025-04-30,DEF 14A,SEC EDGAR
+CSX,CSX Corporation,Industrials,2025-03-25,DEF 14A,SEC EDGAR
+CTAS,Cintas,Industrials,2025-09-16,DEF 14A,SEC EDGAR
+CTRA,Coterra,Energy,2025-03-20,DEF 14A,SEC EDGAR
+CTSH,Cognizant,Information Technology,2025-04-18,DEF 14A,SEC EDGAR
+CTVA,Corteva,Materials,2026-03-19,DEF 14A,SEC EDGAR
+CVNA,Carvana,Consumer Discretionary,2025-03-25,DEF 14A,SEC EDGAR
+CVS,CVS Health,Health Care,2025-04-04,DEF 14A,SEC EDGAR
+CVX,Chevron Corporation,Energy,2025-04-09,DEF 14A,SEC EDGAR
+D,Dominion Energy,Utilities,2026-03-19,DEF 14A,SEC EDGAR
+DAL,Delta Air Lines,Industrials,2025-04-25,DEF 14A,SEC EDGAR
+DASH,DoorDash,Consumer Discretionary,2025-04-29,DEF 14A,SEC EDGAR
+DD,DuPont,Materials,2025-04-03,DEF 14A,SEC EDGAR
+DDOG,Datadog,Information Technology,2026-02-27,DEF 14A,SEC EDGAR
+DE,Deere & Company,Industrials,2026-01-14,DEF 14A,SEC EDGAR
+DECK,Deckers Brands,Consumer Discretionary,2025-07-25,DEF 14A,SEC EDGAR
+DELL,Dell Technologies,Information Technology,2025-05-16,DEF 14A,SEC EDGAR
+DG,Dollar General,Consumer Staples,2025-04-08,DEF 14A,SEC EDGAR
+DGX,Quest Diagnostics,Health Care,2025-04-04,DEF 14A,SEC EDGAR
+DHI,D. R. Horton,Consumer Discretionary,2025-12-10,DEF 14A,SEC EDGAR
+DHR,Danaher Corporation,Health Care,2025-03-26,DEF 14A,SEC EDGAR
+DIS,Walt Disney Company (The),Communication Services,2026-01-22,DEF 14A,SEC EDGAR
+DLR,Digital Realty,Real Estate,2025-04-25,DEF 14A,SEC EDGAR
+DLTR,Dollar Tree,Consumer Staples,2025-05-06,DEF 14A,SEC EDGAR
+DOC,Healthpeak Properties,Real Estate,2026-03-12,DEF 14A,SEC EDGAR
+DOV,Dover Corporation,Industrials,2025-03-20,DEF 14A,SEC EDGAR
+DOW,Dow Inc.,Materials,2026-02-27,DEF 14A,SEC EDGAR
+DPZ,Domino's,Consumer Discretionary,2026-03-10,DEF 14A,SEC EDGAR
+DRI,Darden Restaurants,Consumer Discretionary,2025-08-04,DEF 14A,SEC EDGAR
+DTE,DTE Energy,Utilities,2026-03-12,DEF 14A,SEC EDGAR
+DUK,Duke Energy,Utilities,2026-03-20,DEF 14A,SEC EDGAR
+DVA,DaVita,Health Care,2025-04-24,DEF 14A,SEC EDGAR
+DVN,Devon Energy,Energy,2025-04-23,DEF 14A,SEC EDGAR
+DXCM,Dexcom,Health Care,2025-03-27,DEF 14A,SEC EDGAR
+EA,Electronic Arts,Communication Services,2025-06-24,DEF 14A,SEC EDGAR
+EBAY,eBay Inc.,Consumer Discretionary,2025-04-30,DEF 14A,SEC EDGAR
+ECL,Ecolab,Materials,2026-03-20,DEF 14A,SEC EDGAR
+ED,Consolidated Edison,Utilities,2025-04-09,DEF 14A,SEC EDGAR
+EFX,Equifax,Industrials,2025-03-28,DEF 14A,SEC EDGAR
+EG,Everest Group,Financials,2025-04-11,DEF 14A,SEC EDGAR
+EIX,Edison International,Utilities,2026-03-13,DEF 14A,SEC EDGAR
+EL,Estée Lauder Companies (The),Consumer Staples,2025-09-25,DEF 14A,SEC EDGAR
+ELV,Elevance Health,Health Care,2025-03-28,DEF 14A,SEC EDGAR
+EME,Emcor,Industrials,2025-04-23,DEF 14A,SEC EDGAR
+EMR,Emerson Electric,Industrials,2025-12-12,DEF 14A,SEC EDGAR
+EOG,EOG Resources,Energy,2025-03-28,DEF 14A,SEC EDGAR
+EPAM,EPAM Systems,Information Technology,2025-04-09,DEF 14A,SEC EDGAR
+EQIX,Equinix,Real Estate,2025-04-10,DEF 14A,SEC EDGAR
+EQR,Equity Residential,Real Estate,2025-04-15,DEF 14A,SEC EDGAR
+EQT,EQT Corporation,Energy,2026-02-26,DEF 14A,SEC EDGAR
+ERIE,Erie Indemnity,Financials,2008-03-24,DEF 14A,SEC EDGAR
+ES,Eversource Energy,Utilities,2025-03-21,DEF 14A,SEC EDGAR
+ESS,Essex Property Trust,Real Estate,2025-03-28,DEF 14A,SEC EDGAR
+ETN,Eaton Corporation,Industrials,2026-03-13,DEF 14A,SEC EDGAR
+ETR,Entergy,Utilities,2025-03-21,DEF 14A,SEC EDGAR
+EVRG,Evergy,Utilities,2025-03-27,DEF 14A,SEC EDGAR
+EW,Edwards Lifesciences,Health Care,2025-03-26,DEF 14A,SEC EDGAR
+EXC,Exelon,Utilities,2026-03-18,DEF 14A,SEC EDGAR
+EXE,Expand Energy,Energy,2025-04-25,DEF 14A,SEC EDGAR
+EXPD,Expeditors International,Industrials,2025-03-25,DEF 14A,SEC EDGAR
+EXPE,Expedia Group,Consumer Discretionary,2025-04-21,DEF 14A,SEC EDGAR
+EXR,Extra Space Storage,Real Estate,2025-04-01,DEF 14A,SEC EDGAR
+F,Ford Motor Company,Consumer Discretionary,2025-03-28,DEF 14A,SEC EDGAR
+FANG,Diamondback Energy,Energy,2025-04-10,DEF 14A,SEC EDGAR
+FAST,Fastenal,Industrials,2026-02-25,DEF 14A,SEC EDGAR
+FCX,Freeport-McMoRan,Materials,2025-04-25,DEF 14A,SEC EDGAR
+FDS,FactSet,Financials,2025-10-27,DEF 14A,SEC EDGAR
+FDX,FedEx,Industrials,2025-08-18,DEF 14A,SEC EDGAR
+FE,FirstEnergy,Utilities,2025-04-03,DEF 14A,SEC EDGAR
+FFIV,"F5, Inc.",Information Technology,2026-01-26,DEF 14A,SEC EDGAR
+FICO,Fair Isaac,Information Technology,2026-01-27,DEF 14A,SEC EDGAR
+FIS,Fidelity National Information Services,Financials,2025-04-28,DEF 14A,SEC EDGAR
+FISV,Fiserv,Financials,2025-04-02,DEF 14A,SEC EDGAR
+FITB,Fifth Third Bancorp,Financials,2026-03-09,DEF 14A,SEC EDGAR
+FIX,Comfort Systems USA,Industrials,2025-04-07,DEF 14A,SEC EDGAR
+FOX,Fox Corporation (Class B),Communication Services,2025-09-25,DEF 14A,SEC EDGAR
+FOXA,Fox Corporation (Class A),Communication Services,2025-09-25,DEF 14A,SEC EDGAR
+FRT,Federal Realty Investment Trust,Real Estate,2025-03-28,DEF 14A,SEC EDGAR
+FSLR,First Solar,Information Technology,2025-04-04,DEF 14A,SEC EDGAR
+FTNT,Fortinet,Information Technology,2025-04-25,DEF 14A,SEC EDGAR
+FTV,Fortive,Industrials,2025-04-21,DEF 14A,SEC EDGAR
+GD,General Dynamics,Industrials,2025-03-28,DEF 14A,SEC EDGAR
+GDDY,GoDaddy,Information Technology,2025-04-24,DEF 14A,SEC EDGAR
+GE,GE Aerospace,Industrials,2026-03-12,DEF 14A,SEC EDGAR
+GEHC,GE HealthCare,Health Care,2026-03-19,DEF 14A,SEC EDGAR
+GEN,Gen Digital,Information Technology,2025-07-28,DEF 14A,SEC EDGAR
+GEV,GE Vernova,Industrials,2025-03-28,DEF 14A,SEC EDGAR
+GILD,Gilead Sciences,Health Care,2026-03-20,DEF 14A,SEC EDGAR
+GIS,General Mills,Consumer Staples,2025-08-11,DEF 14A,SEC EDGAR
+GL,Globe Life,Financials,2026-03-19,DEF 14A,SEC EDGAR
+GLW,Corning Inc.,Information Technology,2026-03-20,DEF 14A,SEC EDGAR
+GM,General Motors,Consumer Discretionary,2025-04-22,DEF 14A,SEC EDGAR
+GNRC,Generac,Industrials,2025-04-29,DEF 14A,SEC EDGAR
+GOOG,Alphabet Inc. (Class C),Communication Services,2025-04-25,DEF 14A,SEC EDGAR
+GOOGL,Alphabet Inc. (Class A),Communication Services,2025-04-25,DEF 14A,SEC EDGAR
+GPC,Genuine Parts Company,Consumer Discretionary,2026-02-27,DEF 14A,SEC EDGAR
+GPN,Global Payments,Financials,2026-03-17,DEF 14A,SEC EDGAR
+GRMN,Garmin,Consumer Discretionary,2025-04-23,DEF 14A,SEC EDGAR
+GS,Goldman Sachs,Financials,2026-03-20,DEF 14A,SEC EDGAR
+GWW,W. W. Grainger,Industrials,2026-03-10,DEF 14A,SEC EDGAR
+HAL,Halliburton,Energy,2025-04-01,DEF 14A,SEC EDGAR
+HAS,Hasbro,Consumer Discretionary,2025-04-04,DEF 14A,SEC EDGAR
+HBAN,Huntington Bancshares,Financials,2026-03-12,DEF 14A,SEC EDGAR
+HCA,HCA Healthcare,Health Care,2026-03-13,DEF 14A,SEC EDGAR
+HD,Home Depot (The),Consumer Discretionary,2025-04-07,DEF 14A,SEC EDGAR
+HIG,Hartford (The),Financials,2025-04-10,DEF 14A,SEC EDGAR
+HII,Huntington Ingalls Industries,Industrials,2026-03-20,DEF 14A,SEC EDGAR
+HLT,Hilton Worldwide,Consumer Discretionary,2025-04-04,DEF 14A,SEC EDGAR
+HOLX,Hologic,Health Care,2025-01-16,DEF 14A,SEC EDGAR
+HON,Honeywell,Industrials,2025-04-09,DEF 14A,SEC EDGAR
+HOOD,Robinhood Markets,Financials,2025-04-25,DEF 14A,SEC EDGAR
+HPE,Hewlett Packard Enterprise,Information Technology,2026-02-11,DEF 14A,SEC EDGAR
+HPQ,HP Inc.,Information Technology,2026-02-25,DEF 14A,SEC EDGAR
+HRL,Hormel Foods,Consumer Staples,2025-12-17,DEF 14A,SEC EDGAR
+HSIC,Henry Schein,Health Care,2025-04-09,DEF 14A,SEC EDGAR
+HST,Host Hotels & Resorts,Real Estate,2025-04-03,DEF 14A,SEC EDGAR
+HSY,Hershey Company (The),Consumer Staples,2025-03-26,DEF 14A,SEC EDGAR
+HUBB,Hubbell Incorporated,Industrials,2025-03-24,DEF 14A,SEC EDGAR
+HUM,Humana,Health Care,2026-03-06,DEF 14A,SEC EDGAR
+HWM,Howmet Aerospace,Industrials,2025-04-16,DEF 14A,SEC EDGAR
+IBKR,Interactive Brokers,Financials,2026-03-11,DEF 14A,SEC EDGAR
+IBM,IBM,Information Technology,2026-03-10,DEF 14A,SEC EDGAR
+ICE,Intercontinental Exchange,Financials,2025-03-31,DEF 14A,SEC EDGAR
+IDXX,Idexx Laboratories,Health Care,2025-03-28,DEF 14A,SEC EDGAR
+IEX,IDEX Corporation,Industrials,2025-03-26,DEF 14A,SEC EDGAR
+IFF,International Flavors & Fragrances,Materials,2026-03-18,DEF 14A,SEC EDGAR
+INCY,Incyte,Health Care,2025-04-29,DEF 14A,SEC EDGAR
+INTC,Intel,Information Technology,2025-03-27,DEF 14A,SEC EDGAR
+INTU,Intuit,Information Technology,2025-11-26,DEF 14A,SEC EDGAR
+INVH,Invitation Homes,Real Estate,2025-04-03,DEF 14A,SEC EDGAR
+IP,International Paper,Materials,2025-04-01,DEF 14A,SEC EDGAR
+IQV,IQVIA,Health Care,2026-02-27,DEF 14A,SEC EDGAR
+IR,Ingersoll Rand,Industrials,2025-04-25,DEF 14A,SEC EDGAR
+IRM,Iron Mountain,Real Estate,2025-04-18,DEF 14A,SEC EDGAR
+ISRG,Intuitive Surgical,Health Care,2026-03-13,DEF 14A,SEC EDGAR
+IT,Gartner,Information Technology,2025-04-15,DEF 14A,SEC EDGAR
+ITW,Illinois Tool Works,Industrials,2025-03-21,DEF 14A,SEC EDGAR
+IVZ,Invesco,Financials,2025-03-28,DEF 14A,SEC EDGAR
+J,Jacobs Solutions,Industrials,2025-12-18,DEF 14A,SEC EDGAR
+JBHT,J.B. Hunt,Industrials,2026-03-11,DEF 14A,SEC EDGAR
+JBL,Jabil,Information Technology,2025-12-12,DEF 14A,SEC EDGAR
+JCI,Johnson Controls,Industrials,2026-01-16,DEF 14A,SEC EDGAR
+JKHY,Jack Henry & Associates,Financials,2025-10-02,DEF 14A,SEC EDGAR
+JNJ,Johnson & Johnson,Health Care,2026-03-11,DEF 14A,SEC EDGAR
+JPM,JPMorgan Chase,Financials,2025-04-07,DEF 14A,SEC EDGAR
+KDP,Keurig Dr Pepper,Consumer Staples,2025-04-25,DEF 14A,SEC EDGAR
+KEY,KeyCorp,Financials,2025-03-28,DEF 14A,SEC EDGAR
+KEYS,Keysight Technologies,Information Technology,2026-01-26,DEF 14A,SEC EDGAR
+KHC,Kraft Heinz,Consumer Staples,2025-03-28,DEF 14A,SEC EDGAR
+KIM,Kimco Realty,Real Estate,2025-03-19,DEF 14A,SEC EDGAR
+KKR,KKR & Co.,Financials,2026-02-27,DEF 14A,SEC EDGAR
+KLAC,KLA Corporation,Information Technology,2025-09-23,DEF 14A,SEC EDGAR
+KMB,Kimberly-Clark,Consumer Staples,2026-03-23,DEF 14A,SEC EDGAR
+KMI,Kinder Morgan,Energy,2025-04-04,DEF 14A,SEC EDGAR
+KO,Coca-Cola Company (The),Consumer Staples,2026-03-16,DEF 14A,SEC EDGAR
+KR,Kroger,Consumer Staples,2025-05-15,DEF 14A,SEC EDGAR
+KVUE,Kenvue,Consumer Staples,2025-04-09,DEF 14A,SEC EDGAR
+L,Loews Corporation,Financials,2025-04-02,DEF 14A,SEC EDGAR
+LDOS,Leidos,Industrials,2026-03-19,DEF 14A,SEC EDGAR
+LEN,Lennar,Consumer Discretionary,2026-02-26,DEF 14A,SEC EDGAR
+LH,Labcorp,Health Care,2025-04-04,DEF 14A,SEC EDGAR
+LHX,L3Harris,Industrials,2025-03-07,DEF 14A,SEC EDGAR
+LII,Lennox International,Industrials,2025-04-09,DEF 14A,SEC EDGAR
+LIN,Linde plc,Materials,2025-04-30,DEF 14A,SEC EDGAR
+LLY,Lilly (Eli),Health Care,2026-03-20,DEF 14A,SEC EDGAR
+LMT,Lockheed Martin,Industrials,2025-03-27,DEF 14A,SEC EDGAR
+LNT,Alliant Energy,Utilities,2025-04-01,DEF 14A,SEC EDGAR
+LOW,Lowe's,Consumer Discretionary,2025-04-17,DEF 14A,SEC EDGAR
+LRCX,Lam Research,Information Technology,2025-09-24,DEF 14A,SEC EDGAR
+LULU,Lululemon Athletica,Consumer Discretionary,2025-04-29,DEF 14A,SEC EDGAR
+LUV,Southwest Airlines,Industrials,2025-04-04,DEF 14A,SEC EDGAR
+LVS,Las Vegas Sands,Consumer Discretionary,2025-04-03,DEF 14A,SEC EDGAR
+LW,Lamb Weston,Consumer Staples,2025-08-07,DEF 14A,SEC EDGAR
+LYB,LyondellBasell,Materials,2025-04-11,DEF 14A,SEC EDGAR
+LYV,Live Nation Entertainment,Communication Services,2025-04-25,DEF 14A,SEC EDGAR
+MA,Mastercard,Financials,2025-04-28,DEF 14A,SEC EDGAR
+MAA,Mid-America Apartment Communities,Real Estate,2025-04-01,DEF 14A,SEC EDGAR
+MAR,Marriott International,Consumer Discretionary,2025-03-27,DEF 14A,SEC EDGAR
+MAS,Masco,Industrials,2025-04-07,DEF 14A,SEC EDGAR
+MCD,McDonald's,Consumer Discretionary,2025-04-07,DEF 14A,SEC EDGAR
+MCHP,Microchip Technology,Information Technology,2025-07-07,DEF 14A,SEC EDGAR
+MCK,McKesson Corporation,Health Care,2025-06-20,DEF 14A,SEC EDGAR
+MCO,Moody's Corporation,Financials,2026-03-04,DEF 14A,SEC EDGAR
+MDLZ,Mondelez International,Consumer Staples,2025-04-04,DEF 14A,SEC EDGAR
+MDT,Medtronic,Health Care,2025-08-25,DEF 14A,SEC EDGAR
+MET,MetLife,Financials,2025-04-29,DEF 14A,SEC EDGAR
+META,Meta Platforms,Communication Services,2025-04-17,DEF 14A,SEC EDGAR
+MGM,MGM Resorts,Consumer Discretionary,2025-03-28,DEF 14A,SEC EDGAR
+MKC,McCormick & Company,Consumer Staples,2026-02-18,DEF 14A,SEC EDGAR
+MLM,Martin Marietta Materials,Materials,2025-04-15,DEF 14A,SEC EDGAR
+MMM,3M,Industrials,2025-03-26,DEF 14A,SEC EDGAR
+MNST,Monster Beverage,Consumer Staples,2025-04-25,DEF 14A,SEC EDGAR
+MO,Altria,Consumer Staples,2025-04-03,DEF 14A,SEC EDGAR
+MOH,Molina Healthcare,Health Care,2025-03-17,DEF 14A,SEC EDGAR
+MOS,Mosaic Company (The),Materials,2025-04-16,DEF 14A,SEC EDGAR
+MPC,Marathon Petroleum,Energy,2026-03-16,DEF 14A,SEC EDGAR
+MPWR,Monolithic Power Systems,Information Technology,2025-04-30,DEF 14A,SEC EDGAR
+MRK,Merck & Co.,Health Care,2025-04-09,DEF 14A,SEC EDGAR
+MRNA,Moderna,Health Care,2026-03-16,DEF 14A,SEC EDGAR
+MS,Morgan Stanley,Financials,2025-04-04,DEF 14A,SEC EDGAR
+MSCI,MSCI Inc.,Financials,2026-03-11,DEF 14A,SEC EDGAR
+MSFT,Microsoft,Information Technology,2025-10-21,DEF 14A,SEC EDGAR
+MSI,Motorola Solutions,Information Technology,2025-03-27,DEF 14A,SEC EDGAR
+MTB,M&T Bank,Financials,2026-03-10,DEF 14A,SEC EDGAR
+MTCH,Match Group,Communication Services,2025-04-29,DEF 14A,SEC EDGAR
+MTD,Mettler Toledo,Health Care,2026-03-18,DEF 14A,SEC EDGAR
+MU,Micron Technology,Information Technology,2025-11-25,DEF 14A,SEC EDGAR
+NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,2025-04-29,DEF 14A,SEC EDGAR
+NDAQ,"Nasdaq, Inc.",Financials,2025-04-28,DEF 14A,SEC EDGAR
+NDSN,Nordson Corporation,Industrials,2026-01-16,DEF 14A,SEC EDGAR
+NEE,NextEra Energy,Utilities,2025-04-01,DEF 14A,SEC EDGAR
+NEM,Newmont,Materials,2025-03-14,DEF 14A,SEC EDGAR
+NFLX,Netflix,Communication Services,2025-04-17,DEF 14A,SEC EDGAR
+NI,NiSource,Utilities,2025-03-31,DEF 14A,SEC EDGAR
+NKE,"Nike, Inc.",Consumer Discretionary,2025-07-17,DEF 14A,SEC EDGAR
+NOC,Northrop Grumman,Industrials,2025-04-04,DEF 14A,SEC EDGAR
+NOW,ServiceNow,Information Technology,2025-11-12,DEF 14A,SEC EDGAR
+NRG,NRG Energy,Utilities,2026-03-18,DEF 14A,SEC EDGAR
+NSC,Norfolk Southern,Industrials,2025-03-28,DEF 14A,SEC EDGAR
+NTAP,NetApp,Information Technology,2025-07-25,DEF 14A,SEC EDGAR
+NTRS,Northern Trust,Financials,2026-03-11,DEF 14A,SEC EDGAR
+NUE,Nucor,Materials,2025-03-24,DEF 14A,SEC EDGAR
+NVDA,Nvidia,Information Technology,2025-05-13,DEF 14A,SEC EDGAR
+NVR,"NVR, Inc.",Consumer Discretionary,2026-03-17,DEF 14A,SEC EDGAR
+NWS,News Corp (Class B),Communication Services,2025-10-08,DEF 14A,SEC EDGAR
+NWSA,News Corp (Class A),Communication Services,2025-10-08,DEF 14A,SEC EDGAR
+NXPI,NXP Semiconductors,Information Technology,2025-04-29,DEF 14A,SEC EDGAR
+O,Realty Income,Real Estate,2025-03-26,DEF 14A,SEC EDGAR
+ODFL,Old Dominion,Industrials,2025-04-21,DEF 14A,SEC EDGAR
+OKE,Oneok,Energy,2025-04-02,DEF 14A,SEC EDGAR
+OMC,Omnicom Group,Communication Services,2025-12-22,DEF 14A,SEC EDGAR
+ON,ON Semiconductor,Information Technology,2025-04-03,DEF 14A,SEC EDGAR
+ORCL,Oracle Corporation,Information Technology,2025-09-26,DEF 14A,SEC EDGAR
+ORLY,O’Reilly Automotive,Consumer Discretionary,2025-03-31,DEF 14A,SEC EDGAR
+OTIS,Otis Worldwide,Industrials,2025-04-04,DEF 14A,SEC EDGAR
+OXY,Occidental Petroleum,Energy,2026-03-19,DEF 14A,SEC EDGAR
+PANW,Palo Alto Networks,Information Technology,2025-11-07,DEF 14A,SEC EDGAR
+PAYC,Paycom,Industrials,2025-04-03,DEF 14A,SEC EDGAR
+PAYX,Paychex,Industrials,2025-08-29,DEF 14A,SEC EDGAR
+PCAR,Paccar,Industrials,2026-03-18,DEF 14A,SEC EDGAR
+PCG,PG&E Corporation,Utilities,2025-04-10,DEF 14A,SEC EDGAR
+PEG,Public Service Enterprise Group,Utilities,2026-03-12,DEF 14A,SEC EDGAR
+PEP,PepsiCo,Consumer Staples,2025-03-28,DEF 14A,SEC EDGAR
+PFE,Pfizer,Health Care,2026-03-12,DEF 14A,SEC EDGAR
+PFG,Principal Financial Group,Financials,2025-04-07,DEF 14A,SEC EDGAR
+PG,Procter & Gamble,Consumer Staples,2025-08-29,DEF 14A,SEC EDGAR
+PGR,Progressive Corporation,Financials,2026-03-23,DEF 14A,SEC EDGAR
+PH,Parker Hannifin,Industrials,2025-09-19,DEF 14A,SEC EDGAR
+PHM,PulteGroup,Consumer Discretionary,2026-03-13,DEF 14A,SEC EDGAR
+PKG,Packaging Corporation of America,Materials,2025-03-27,DEF 14A,SEC EDGAR
+PLD,Prologis,Real Estate,2026-03-19,DEF 14A,SEC EDGAR
+PLTR,Palantir Technologies,Information Technology,2025-04-25,DEF 14A,SEC EDGAR
+PM,Philip Morris International,Consumer Staples,2025-03-27,DEF 14A,SEC EDGAR
+PNC,PNC Financial Services,Financials,2026-03-11,DEF 14A,SEC EDGAR
+PNR,Pentair,Industrials,2026-03-20,DEF 14A,SEC EDGAR
+PNW,Pinnacle West Capital,Utilities,2025-04-08,DEF 14A,SEC EDGAR
+PODD,Insulet Corporation,Health Care,2025-04-29,DEF 14A,SEC EDGAR
+POOL,Pool Corporation,Consumer Discretionary,2025-03-27,DEF 14A,SEC EDGAR
+PPG,PPG Industries,Materials,2026-03-05,DEF 14A,SEC EDGAR
+PPL,PPL Corporation,Utilities,2025-04-02,DEF 14A,SEC EDGAR
+PRU,Prudential Financial,Financials,2025-03-27,DEF 14A,SEC EDGAR
+PSA,Public Storage,Real Estate,2025-03-28,DEF 14A,SEC EDGAR
+PSX,Phillips 66,Energy,2024-04-03,DEF 14A,SEC EDGAR
+PTC,PTC Inc.,Information Technology,2025-12-23,DEF 14A,SEC EDGAR
+PWR,Quanta Services,Industrials,2025-04-11,DEF 14A,SEC EDGAR
+PYPL,PayPal,Financials,2025-04-21,DEF 14A,SEC EDGAR
+QCOM,Qualcomm,Information Technology,2026-01-22,DEF 14A,SEC EDGAR
+RCL,Royal Caribbean Group,Consumer Discretionary,2025-04-18,DEF 14A,SEC EDGAR
+REG,Regency Centers,Real Estate,2025-03-26,DEF 14A,SEC EDGAR
+REGN,Regeneron Pharmaceuticals,Health Care,2025-04-29,DEF 14A,SEC EDGAR
+RF,Regions Financial Corporation,Financials,2025-03-03,DEF 14A,SEC EDGAR
+RJF,Raymond James Financial,Financials,2026-01-07,DEF 14A,SEC EDGAR
+RL,Ralph Lauren Corporation,Consumer Discretionary,2025-06-20,DEF 14A,SEC EDGAR
+RMD,ResMed,Health Care,2025-10-02,DEF 14A,SEC EDGAR
+ROK,Rockwell Automation,Industrials,2025-12-22,DEF 14A,SEC EDGAR
+ROL,"Rollins, Inc.",Industrials,2026-03-17,DEF 14A,SEC EDGAR
+ROP,Roper Technologies,Information Technology,2025-04-25,DEF 14A,SEC EDGAR
+ROST,Ross Stores,Consumer Discretionary,2025-04-08,DEF 14A,SEC EDGAR
+RSG,Republic Services,Industrials,2025-04-07,DEF 14A,SEC EDGAR
+RTX,RTX Corporation,Industrials,2026-03-09,DEF 14A,SEC EDGAR
+RVTY,Revvity,Health Care,2026-03-16,DEF 14A,SEC EDGAR
+SBAC,SBA Communications,Real Estate,2025-04-07,DEF 14A,SEC EDGAR
+SBUX,Starbucks,Consumer Discretionary,2026-01-26,DEF 14A,SEC EDGAR
+SCHW,Charles Schwab Corporation,Financials,2025-04-04,DEF 14A,SEC EDGAR
+SHW,Sherwin-Williams,Materials,2026-03-11,DEF 14A,SEC EDGAR
+SJM,J.M. Smucker Company (The),Consumer Staples,2025-06-27,DEF 14A,SEC EDGAR
+SLB,Schlumberger,Energy,2026-02-26,DEF 14A,SEC EDGAR
+SMCI,Supermicro,Information Technology,2026-03-03,DEF 14A,SEC EDGAR
+SNA,Snap-on,Industrials,2026-03-12,DEF 14A,SEC EDGAR
+SNDK,Sandisk,Information Technology,2025-10-07,DEF 14A,SEC EDGAR
+SNPS,Synopsys,Information Technology,2026-02-19,DEF 14A,SEC EDGAR
+SO,Southern Company,Utilities,2025-04-11,DEF 14A,SEC EDGAR
+SOLV,Solventum,Health Care,2025-03-21,DEF 14A,SEC EDGAR
+SPG,Simon Property Group,Real Estate,2025-04-01,DEF 14A,SEC EDGAR
+SPGI,S&P Global,Financials,2025-03-25,DEF 14A,SEC EDGAR
+SRE,Sempra,Utilities,2025-03-28,DEF 14A,SEC EDGAR
+STE,Steris,Health Care,2025-06-12,DEF 14A,SEC EDGAR
+STLD,Steel Dynamics,Materials,2025-03-13,DEF 14A,SEC EDGAR
+STT,State Street Corporation,Financials,2025-04-03,DEF 14A,SEC EDGAR
+STX,Seagate Technology,Information Technology,2025-09-09,DEF 14A,SEC EDGAR
+STZ,Constellation Brands,Consumer Staples,2025-06-05,DEF 14A,SEC EDGAR
+SW,Smurfit Westrock,Materials,2026-03-11,DEF 14A,SEC EDGAR
+SWK,Stanley Black & Decker,Industrials,2026-03-06,DEF 14A,SEC EDGAR
+SWKS,Skyworks Solutions,Information Technology,2025-03-28,DEF 14A,SEC EDGAR
+SYF,Synchrony Financial,Financials,2025-04-25,DEF 14A,SEC EDGAR
+SYK,Stryker Corporation,Health Care,2026-03-23,DEF 14A,SEC EDGAR
+SYY,Sysco,Consumer Staples,2025-10-02,DEF 14A,SEC EDGAR
+T,AT&T,Communication Services,2025-04-04,DEF 14A,SEC EDGAR
+TAP,Molson Coors Beverage Company,Consumer Staples,2025-04-02,DEF 14A,SEC EDGAR
+TDG,TransDigm Group,Industrials,2026-01-23,DEF 14A,SEC EDGAR
+TDY,Teledyne Technologies,Information Technology,2026-03-12,DEF 14A,SEC EDGAR
+TECH,Bio-Techne,Health Care,2025-09-19,DEF 14A,SEC EDGAR
+TEL,TE Connectivity,Information Technology,2026-01-15,DEF 14A,SEC EDGAR
+TER,Teradyne,Information Technology,2025-03-28,DEF 14A,SEC EDGAR
+TFC,Truist Financial,Financials,2026-03-16,DEF 14A,SEC EDGAR
+TGT,Target Corporation,Consumer Staples,2025-04-28,DEF 14A,SEC EDGAR
+TJX,TJX Companies,Consumer Discretionary,2025-05-01,DEF 14A,SEC EDGAR
+TKO,TKO Group Holdings,Communication Services,2025-04-25,DEF 14A,SEC EDGAR
+TMO,Thermo Fisher Scientific,Health Care,2025-04-08,DEF 14A,SEC EDGAR
+TMUS,T-Mobile US,Communication Services,2025-04-18,DEF 14A,SEC EDGAR
+TPL,Texas Pacific Land Corporation,Energy,2025-09-26,DEF 14A,SEC EDGAR
+TPR,"Tapestry, Inc.",Consumer Discretionary,2025-09-26,DEF 14A,SEC EDGAR
+TRGP,Targa Resources,Energy,2025-03-28,DEF 14A,SEC EDGAR
+TRMB,Trimble Inc.,Information Technology,2025-04-30,DEF 14A,SEC EDGAR
+TROW,T. Rowe Price,Financials,2026-03-17,DEF 14A,SEC EDGAR
+TRV,Travelers Companies (The),Financials,2025-04-04,DEF 14A,SEC EDGAR
+TSCO,Tractor Supply,Consumer Discretionary,2025-03-27,DEF 14A,SEC EDGAR
+TSLA,"Tesla, Inc.",Consumer Discretionary,2025-09-17,DEF 14A,SEC EDGAR
+TSN,Tyson Foods,Consumer Staples,2025-12-17,DEF 14A,SEC EDGAR
+TT,Trane Technologies,Industrials,2025-04-24,DEF 14A,SEC EDGAR
+TTD,Trade Desk (The),Communication Services,2025-07-24,DEF 14A,SEC EDGAR
+TTWO,Take-Two Interactive,Communication Services,2025-07-28,DEF 14A,SEC EDGAR
+TXN,Texas Instruments,Information Technology,2026-03-04,DEF 14A,SEC EDGAR
+TXT,Textron,Industrials,2026-03-05,DEF 14A,SEC EDGAR
+TYL,Tyler Technologies,Information Technology,2026-03-23,DEF 14A,SEC EDGAR
+UAL,United Airlines Holdings,Industrials,2025-04-10,DEF 14A,SEC EDGAR
+UBER,Uber,Industrials,2025-03-24,DEF 14A,SEC EDGAR
+UDR,"UDR, Inc.",Real Estate,2025-03-27,DEF 14A,SEC EDGAR
+UHS,Universal Health Services,Health Care,2025-04-03,DEF 14A,SEC EDGAR
+ULTA,Ulta Beauty,Consumer Discretionary,2025-04-23,DEF 14A,SEC EDGAR
+UNH,UnitedHealth Group,Health Care,2025-04-21,DEF 14A,SEC EDGAR
+UNP,Union Pacific Corporation,Industrials,2025-03-25,DEF 14A,SEC EDGAR
+UPS,United Parcel Service,Industrials,2026-03-19,DEF 14A,SEC EDGAR
+URI,United Rentals,Industrials,2025-03-26,DEF 14A,SEC EDGAR
+USB,U.S. Bancorp,Financials,2026-03-10,DEF 14A,SEC EDGAR
+V,Visa Inc.,Financials,2025-12-08,DEF 14A,SEC EDGAR
+VICI,Vici Properties,Real Estate,2026-03-16,DEF 14A,SEC EDGAR
+VLO,Valero Energy,Energy,2026-03-19,DEF 14A,SEC EDGAR
+VLTO,Veralto,Industrials,2025-03-28,DEF 14A,SEC EDGAR
+VMC,Vulcan Materials Company,Materials,2025-03-24,DEF 14A,SEC EDGAR
+VRSK,Verisk Analytics,Industrials,2025-04-04,DEF 14A,SEC EDGAR
+VRSN,Verisign,Information Technology,2025-04-11,DEF 14A,SEC EDGAR
+VRTX,Vertex Pharmaceuticals,Health Care,2025-04-03,DEF 14A,SEC EDGAR
+VST,Vistra Corp.,Utilities,2026-03-18,DEF 14A,SEC EDGAR
+VTR,Ventas,Real Estate,2025-04-01,DEF 14A,SEC EDGAR
+VTRS,Viatris,Health Care,2025-10-24,DEF 14A,SEC EDGAR
+VZ,Verizon,Communication Services,2025-04-07,DEF 14A,SEC EDGAR
+WAB,Wabtec,Industrials,2025-04-03,DEF 14A,SEC EDGAR
+WAT,Waters Corporation,Health Care,2025-04-09,DEF 14A,SEC EDGAR
+WBD,Warner Bros. Discovery,Communication Services,2025-04-23,DEF 14A,SEC EDGAR
+WDAY,"Workday, Inc.",Information Technology,2025-04-23,DEF 14A,SEC EDGAR
+WDC,Western Digital,Information Technology,2025-10-06,DEF 14A,SEC EDGAR
+WEC,WEC Energy Group,Utilities,2025-03-27,DEF 14A,SEC EDGAR
+WELL,Welltower,Real Estate,2025-04-11,DEF 14A,SEC EDGAR
+WFC,Wells Fargo,Financials,2026-03-18,DEF 14A,SEC EDGAR
+WM,Waste Management,Industrials,2025-04-01,DEF 14A,SEC EDGAR
+WMB,Williams Companies,Energy,2026-03-18,DEF 14A,SEC EDGAR
+WMT,Walmart,Consumer Staples,2025-04-24,DEF 14A,SEC EDGAR
+WRB,W. R. Berkley Corporation,Financials,2025-04-25,DEF 14A,SEC EDGAR
+WSM,"Williams-Sonoma, Inc.",Consumer Discretionary,2025-04-29,DEF 14A,SEC EDGAR
+WST,West Pharmaceutical Services,Health Care,2026-03-12,DEF 14A,SEC EDGAR
+WTW,Willis Towers Watson,Financials,2025-03-28,DEF 14A,SEC EDGAR
+WY,Weyerhaeuser,Real Estate,2025-03-26,DEF 14A,SEC EDGAR
+WYNN,Wynn Resorts,Consumer Discretionary,2025-03-19,DEF 14A,SEC EDGAR
+XEL,Xcel Energy,Utilities,2025-04-08,DEF 14A,SEC EDGAR
+XOM,ExxonMobil,Energy,2025-04-07,DEF 14A,SEC EDGAR
+XYL,Xylem Inc.,Industrials,2025-03-31,DEF 14A,SEC EDGAR
+XYZ,"Block, Inc.",Financials,2025-04-25,DEF 14A,SEC EDGAR
+YUM,Yum! Brands,Consumer Discretionary,2025-04-04,DEF 14A,SEC EDGAR
+ZBH,Zimmer Biomet,Health Care,2025-04-14,DEF 14A,SEC EDGAR
+ZBRA,Zebra Technologies,Information Technology,2025-03-28,DEF 14A,SEC EDGAR
+ZTS,Zoetis,Health Care,2025-04-09,DEF 14A,SEC EDGAR
+MMC,Marsh McLennan,Financials,2025-03-28,DEF 14A,SEC EDGAR

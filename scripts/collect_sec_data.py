@@ -9,7 +9,14 @@ Gender determination uses a 3-tier cascade:
   3. Marked 'unknown' for manual verification
 
 Data source: SEC EDGAR (https://www.sec.gov/edgar/)
+
+Universe: default `data/sp500_constituents.csv` (full S&P 500). Not every firm
+may yield non-zero NEO counts due to filing layout / parser limits; treat
+coverage as an analysis caveat.
+
+Refresh constituents: `python scripts/fetch_sp500_constituents.py`
 """
+import argparse
 import json
 import csv
 import re
@@ -20,58 +27,31 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-COMPANIES = [
-    ("AAPL", "Apple Inc.", "Technology"),
-    ("MSFT", "Microsoft Corp.", "Technology"),
-    ("GOOG", "Alphabet Inc.", "Technology"),
-    ("META", "Meta Platforms Inc.", "Technology"),
-    ("NVDA", "NVIDIA Corp.", "Technology"),
-    ("CRM", "Salesforce Inc.", "Technology"),
-    ("ADBE", "Adobe Inc.", "Technology"),
-    ("ORCL", "Oracle Corp.", "Technology"),
-    ("JPM", "JPMorgan Chase & Co.", "Finance"),
-    ("BAC", "Bank of America Corp.", "Finance"),
-    ("GS", "Goldman Sachs Group Inc.", "Finance"),
-    ("MS", "Morgan Stanley", "Finance"),
-    ("C", "Citigroup Inc.", "Finance"),
-    ("WFC", "Wells Fargo & Co.", "Finance"),
-    ("BLK", "BlackRock Inc.", "Finance"),
-    ("JNJ", "Johnson & Johnson", "Healthcare"),
-    ("UNH", "UnitedHealth Group Inc.", "Healthcare"),
-    ("PFE", "Pfizer Inc.", "Healthcare"),
-    ("ABBV", "AbbVie Inc.", "Healthcare"),
-    ("MRK", "Merck & Co. Inc.", "Healthcare"),
-    ("LLY", "Eli Lilly & Co.", "Healthcare"),
-    ("AMZN", "Amazon.com Inc.", "Consumer"),
-    ("WMT", "Walmart Inc.", "Consumer"),
-    ("PG", "Procter & Gamble Co.", "Consumer"),
-    ("KO", "Coca-Cola Co.", "Consumer"),
-    ("PEP", "PepsiCo Inc.", "Consumer"),
-    ("NKE", "Nike Inc.", "Consumer"),
-    ("SBUX", "Starbucks Corp.", "Consumer"),
-    ("MCD", "McDonald's Corp.", "Consumer"),
-    ("COST", "Costco Wholesale Corp.", "Consumer"),
-    ("GE", "General Electric Co.", "Industrial"),
-    ("CAT", "Caterpillar Inc.", "Industrial"),
-    ("HON", "Honeywell Intl Inc.", "Industrial"),
-    ("BA", "Boeing Co.", "Industrial"),
-    ("MMM", "3M Co.", "Industrial"),
-    ("UPS", "United Parcel Service Inc.", "Industrial"),
-    ("XOM", "Exxon Mobil Corp.", "Energy"),
-    ("CVX", "Chevron Corp.", "Energy"),
-    ("COP", "ConocoPhillips", "Energy"),
-    ("SLB", "Schlumberger Ltd.", "Energy"),
-    ("DIS", "Walt Disney Co.", "Media"),
-    ("NFLX", "Netflix Inc.", "Media"),
-    ("CMCSA", "Comcast Corp.", "Media"),
-    ("T", "AT&T Inc.", "Telecom"),
-    ("VZ", "Verizon Communications Inc.", "Telecom"),
-    ("TSLA", "Tesla Inc.", "Automotive"),
-    ("GM", "General Motors Co.", "Automotive"),
-    ("FDX", "FedEx Corp.", "Logistics"),
-    ("IBM", "IBM Corp.", "Technology"),
-    ("INTC", "Intel Corp.", "Technology"),
-]
+DEFAULT_CONSTITUENTS_CSV = DATA_DIR / "sp500_constituents.csv"
+
+
+def load_companies(csv_path):
+    """
+    Load (ticker, company_name, industry) from CSV with columns:
+    ticker, company, industry
+    """
+    path = Path(csv_path)
+    if not path.is_file():
+        raise FileNotFoundError(f"Constituents file not found: {path}")
+
+    rows = []
+    with open(path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            t = (row.get("ticker") or "").strip()
+            c = (row.get("company") or "").strip()
+            i = (row.get("industry") or "").strip()
+            if not t:
+                continue
+            rows.append((t, c, i))
+    if not rows:
+        raise ValueError(f"No tickers loaded from {path}")
+    return rows
 
 FEMALE_NAMES = {
     "mary", "patricia", "jennifer", "linda", "barbara", "elizabeth", "susan",
@@ -391,21 +371,39 @@ def extract_proxy_data(ticker, company_name, industry):
     }
 
 
-def collect_all(retry_failed_only=False):
-    """Run extraction for all companies. Returns (rows, sec_index, failed)."""
+def collect_all(retry_failed_only=False, companies=None):
+    """
+    Run extraction for all companies. Returns (rows, sec_index, failed).
+
+    companies: list of (ticker, company_name, industry); required unless
+    retry_failed_only loads an empty set (then returns empty results).
+    """
     from edgar import set_identity
 
     set_identity("Leadership Research UZH research@uzh.ch")
 
     failed_file = DATA_DIR / "_failed_tickers.json"
 
+    if companies is None:
+        companies = []
+
+    ticker_meta = {t: (t, n, i) for t, n, i in companies}
+
     if retry_failed_only and failed_file.exists():
         with open(failed_file) as f:
             retry_set = set(json.load(f))
-        targets = [(t, n, i) for t, n, i in COMPANIES if t in retry_set]
+        targets = [
+            ticker_meta[t] for t in sorted(retry_set) if t in ticker_meta
+        ]
+        missing = retry_set - set(ticker_meta.keys())
+        if missing:
+            print(
+                f"Warning: {len(missing)} failed tickers not in constituents "
+                f"(skipped): {sorted(missing)[:20]}{'...' if len(missing) > 20 else ''}"
+            )
         print(f"Retrying {len(targets)} previously failed tickers...")
     else:
-        targets = list(COMPANIES)
+        targets = list(companies)
 
     rows = []
     failed = []
@@ -464,14 +462,54 @@ def save_to_csv(dataset, filename):
     print(f"Saved {len(dataset)} rows -> {filepath}")
 
 
+def parse_args(argv=None):
+    p = argparse.ArgumentParser(
+        description="Collect NEO gender data from DEF 14A filings."
+    )
+    p.add_argument(
+        "--constituents",
+        type=Path,
+        default=DEFAULT_CONSTITUENTS_CSV,
+        help=f"path to ticker CSV (default: {DEFAULT_CONSTITUENTS_CSV})",
+    )
+    p.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        metavar="N",
+        help="process only first N tickers (after load; for smoke tests)",
+    )
+    p.add_argument(
+        "--retry-failed",
+        action="store_true",
+        help="retry tickers listed in data/_failed_tickers.json only",
+    )
+    return p.parse_args(argv)
+
+
 if __name__ == "__main__":
-    retry = "--retry-failed" in sys.argv
+    args = parse_args()
 
     print("=" * 65)
     print("SEC EDGAR DEF 14A -- NEO Gender Composition Collector")
     print("=" * 65)
 
-    rows, sec_index, failed = collect_all(retry_failed_only=retry)
+    companies = load_companies(args.constituents)
+    if args.retry_failed:
+        print(
+            f"Loaded {len(companies)} tickers from {args.constituents} "
+            "(full list; --limit ignored for retry metadata)."
+        )
+    elif args.limit is not None and args.limit > 0:
+        companies = companies[: args.limit]
+        print(f"Using first {len(companies)} tickers (--limit).")
+    else:
+        print(f"Loaded {len(companies)} tickers from {args.constituents}.")
+
+    rows, sec_index, failed = collect_all(
+        retry_failed_only=args.retry_failed,
+        companies=companies,
+    )
 
     save_to_csv(rows, "leadership_gender_data.csv")
     save_to_csv(sec_index, "sec_filings_index.csv")

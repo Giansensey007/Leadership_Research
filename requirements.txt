@@ -1,0 +1,6 @@
+# SEC EDGAR access + DEF 14A parsing
+edgartools>=5.0
+
+# S&P 500 constituents fetch (scripts/fetch_sp500_constituents.py)
+pandas>=2.0
+lxml>=4.0
