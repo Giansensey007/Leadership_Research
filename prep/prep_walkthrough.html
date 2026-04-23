@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prep Walkthrough — Leadership Research (Women in S&amp;P 500 Leadership)</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #161922;
+    --panel-2: #1c2030;
+    --border: #2a2f40;
+    --text: #e6e9ef;
+    --muted: #9aa3b2;
+    --accent: #7aa2ff;
+    --accent-2: #9b87ff;
+    --good: #5ad19b;
+    --warn: #f0b267;
+    --bad: #ef6f7b;
+    --code-bg: #11141c;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    line-height: 1.55; }
+  .layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+  nav.side {
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    padding: 20px 14px; border-right: 1px solid var(--border);
+    background: var(--panel);
+  }
+  nav.side h1 { font-size: 15px; margin: 0 0 6px; letter-spacing: .3px; }
+  nav.side .sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  nav.side ol { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+  nav.side li { counter-increment: step; margin: 4px 0; }
+  nav.side a {
+    display: block; padding: 8px 10px; border-radius: 8px; color: var(--text);
+    text-decoration: none; font-size: 13px; border: 1px solid transparent;
+  }
+  nav.side a:before { content: counter(step) ". "; color: var(--muted); margin-right: 2px; }
+  nav.side a:hover { background: var(--panel-2); border-color: var(--border); }
+  main { padding: 28px 40px 120px; max-width: 1000px; }
+  h1.title { font-size: 26px; margin: 0 0 4px; }
+  .kicker { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  section { padding: 22px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 20px; }
+  section h2 { font-size: 20px; margin: 0 0 6px; }
+  section h3 { font-size: 15px; margin: 18px 0 6px; color: var(--accent); }
+  .tag {
+    display: inline-block; padding: 2px 8px; border-radius: 999px;
+    background: var(--panel-2); color: var(--muted); font-size: 11px;
+    border: 1px solid var(--border); margin-right: 6px;
+  }
+  .tag.hot { color: var(--warn); border-color: #5a4020; background: #2a1e10; }
+  .tag.good { color: var(--good); border-color: #1f4a36; background: #11241c; }
+  .tag.bad { color: var(--bad); border-color: #5a2029; background: #2a1116; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 16px; margin: 10px 0;
+  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } .layout { grid-template-columns: 1fr; } nav.side { position: static; height: auto; }}
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  code { background: var(--code-bg); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border); font-size: 12.5px; }
+  pre { background: var(--code-bg); padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; overflow: auto; font-size: 12.5px; }
+  .kv { display: grid; grid-template-columns: 220px 1fr; gap: 6px 16px; font-size: 14px; }
+  .kv div:nth-child(odd) { color: var(--muted); }
+  details {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 14px; margin: 8px 0;
+  }
+  details summary { cursor: pointer; font-weight: 600; }
+  details[open] summary { margin-bottom: 8px; }
+  .qa { background: var(--panel-2); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 6px; margin: 10px 0; }
+  .qa .q { color: var(--warn); font-weight: 600; margin-bottom: 4px; }
+  .qa .a { color: var(--text); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+  .callout { background: #1a2036; border: 1px solid #2f3b5e; border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 8px; margin: 10px 0; }
+  .callout.warn { background: #2a1e10; border-color: #5a4020; border-left-color: var(--warn); }
+  .callout.bad { background: #2a1116; border-color: #5a2029; border-left-color: var(--bad); }
+  .big-num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .big-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  @media (max-width: 860px) { .stat-row { grid-template-columns: repeat(2, 1fr); } }
+  .muted { color: var(--muted); }
+  .pill-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li:before { content: "☐ "; color: var(--muted); }
+  .topbar { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; }
+  .topbar .time { color: var(--muted); font-size: 12px; }
+  .progress { height: 4px; background: var(--panel-2); border-radius: 4px; position: fixed; top: 0; left: 0; right: 0; z-index: 5; }
+  .progress > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); width: 0%; }
+</style>
+</head>
+<body>
+<div class="progress"><span id="progressBar"></span></div>
+<div class="layout">
+  <nav class="side">
+    <h1>Prof Meeting Prep</h1>
+    <div class="sub">Women in S&amp;P 500 Leadership<br/>Meeting today · ~20–30 min</div>
+    <ol>
+      <li><a href="#oneliner">The one-liner</a></li>
+      <li><a href="#peerform">Peer check-in answers</a></li>
+      <li><a href="#rqh">RQs &amp; Hypotheses</a></li>
+      <li><a href="#vars">IVs, DV, moderator, controls</a></li>
+      <li><a href="#design">Research design</a></li>
+      <li><a href="#data">Data &amp; where it comes from</a></li>
+      <li><a href="#scraper">How the scraper works</a></li>
+      <li><a href="#gender">How gender is assigned</a></li>
+      <li><a href="#outputs">Output files</a></li>
+      <li><a href="#stats">Current sample stats</a></li>
+      <li><a href="#analysis">Analysis plan</a></li>
+      <li><a href="#caveats">Known caveats</a></li>
+      <li><a href="#evolution">How the project evolved</a></li>
+      <li><a href="#qa">Likely prof questions</a></li>
+      <li><a href="#cheat">Last-minute cheat sheet</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="topbar">
+      <h1 class="title">Leadership Research — Prep Walkthrough</h1>
+    </div>
+    <div class="kicker">
+      Assume you forgot everything. Read top-to-bottom. Each section tells you what to say out loud.
+    </div>
+
+    <!-- 1 -->
+    <section id="oneliner">
+      <h2>1. The 30-second one-liner</h2>
+      <div class="card">
+        <p style="margin:0">
+          <b>"I'm studying what firm-level factors predict women's representation in top leadership of
+          S&amp;P 500 companies. I scraped all 500 DEF 14A proxy filings from SEC EDGAR, extracted the
+          Named Executive Officers (NEOs) from each company's Summary Compensation Table, and inferred
+          gender using honorifics and first-name lookup. My dependent variable is the percentage of
+          women among NEOs; my main IV is whether the CEO is female and which industry the firm is in."</b>
+        </p>
+      </div>
+      <div class="callout">
+        If you only remember one sentence, remember this one. Start the meeting with it.
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="peerform">
+      <h2>2. Peer Check-In answers (for the form)</h2>
+      <p class="muted">These are the six exact fields on the peer check-in sheet. Answer in this order if asked.</p>
+
+      <div class="card">
+        <div class="kv">
+          <div>My Name</div><div>Gian Senpinar</div>
+          <div>Peer Name</div><div>(whoever you're paired with)</div>
+
+          <div>One research question / hypothesis</div>
+          <div>
+            <b>RQ:</b> What firm-level factors predict women's representation in top leadership of S&amp;P 500 firms?
+            <br/><b>H1:</b> Firms with a female CEO have a higher proportion of women in the C-suite (NEOs).
+          </div>
+
+          <div>One IV and one DV operationalized</div>
+          <div>
+            <b>IV:</b> <code>ceo_gender</code> — binary, "female" if the principal executive officer (PEO) in the
+            DEF 14A proxy is female, else "male". Inferred from honorifics (Mr./Ms./Mrs.) and first-name lookup.
+            <br/><b>DV:</b> <code>pct_female_neos</code> — number of female NEOs ÷ total NEOs × 100, per firm,
+            using the Summary Compensation Table of the latest DEF 14A filing.
+          </div>
+
+          <div>Research design</div>
+          <div>
+            Cross-sectional, observational, firm-level. Population: S&amp;P 500 constituents.
+            Unit of analysis: one firm = one row. Data: most recent DEF 14A proxy per firm (2024–2026 filings).
+          </div>
+
+          <div>Analysis plan</div>
+          <div>
+            Descriptives + correlation matrix, then OLS regression of <code>pct_female_neos</code> on
+            female-CEO dummy, industry dummies, and controls; robustness with count DV and interaction
+            (board diversity × industry). VIF for multicollinearity.
+          </div>
+
+          <div>One piece of constructive feedback (to give peer)</div>
+          <div>Be ready to improvise this on the spot — use their IV/DV and question its operationalization.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section id="rqh">
+      <h2>3. Research question &amp; hypotheses</h2>
+      <div class="card">
+        <p><b>RQ.</b> What firm-level factors predict women's representation in top leadership (C-suite / NEOs)
+        in S&amp;P 500 companies?</p>
+        <p><b>H1.</b> Board gender diversity (% women on board) is positively associated with the proportion of women in the C-suite.</p>
+        <p><b>H2.</b> Firms with a female CEO or CFO have a higher proportion of women among NEOs overall.</p>
+        <p><b>H3.</b> Industry moderates H1: the board→C-suite relationship is <i>stronger</i> in industries with historically low female representation (e.g., Energy, Industrials) — i.e., diverse boards matter more where there's more slack to fill.</p>
+      </div>
+      <div class="callout warn">
+        Honest note: in the actual scraped data, you currently have NEOs + CEO gender, not board composition.
+        If the prof asks about H1, say: <i>"Board-level diversity is a planned extension; the pilot tests H2 (female CEO → more female NEOs) and the industry effect (H3 as a main-effect first)."</i>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section id="vars">
+      <h2>4. Variables</h2>
+      <table>
+        <thead><tr><th>Role</th><th>Variable</th><th>Operationalization</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag good">DV</span></td><td><code>pct_female_neos</code></td><td>female_neos / total_neos × 100</td><td>DEF 14A Summary Compensation Table</td></tr>
+          <tr><td><span class="tag hot">IV</span></td><td><code>ceo_gender</code></td><td>Binary: 1 = female PEO, 0 = male</td><td>DEF 14A + honorific lookup</td></tr>
+          <tr><td><span class="tag hot">IV</span></td><td><code>industry</code></td><td>GICS sector (11 categories)</td><td>Wikipedia S&amp;P 500 list</td></tr>
+          <tr><td><span class="tag">IV (planned)</span></td><td>% women on board</td><td>women_on_board / board_size</td><td>Not yet in dataset</td></tr>
+          <tr><td><span class="tag">Moderator</span></td><td>industry</td><td>Interaction term board_div × industry</td><td>GICS</td></tr>
+          <tr><td><span class="tag">Control</span></td><td>firm size</td><td>log(employees) or log(revenue)</td><td>Planned, not yet merged</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        Key distinction to use out loud: <b>"NEOs"</b> (Named Executive Officers — the top 3–5 paid execs
+        reported in the proxy) is what you actually measured. "C-suite" is the conceptual target.
+        NEOs is the standard, auditable proxy for C-suite in accounting/finance research because firms are
+        required by SEC rules to disclose it.
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section id="design">
+      <h2>5. Research design</h2>
+      <div class="card">
+        <ul>
+          <li><b>Type:</b> Cross-sectional, observational, archival.</li>
+          <li><b>Unit of analysis:</b> Firm (one row = one S&amp;P 500 company).</li>
+          <li><b>Sample frame:</b> Current S&amp;P 500 constituents (snapshot from Wikipedia).</li>
+          <li><b>N:</b> 500 firms targeted, <b>500 rows written</b>, of which <b>340 have non-zero NEO data</b> (the rest are parser misses, not missing filings).</li>
+          <li><b>Time window:</b> Each firm's most recent DEF 14A (filings mostly 2024–2026).</li>
+          <li><b>Why DEF 14A:</b> SEC-mandated annual proxy; legally required to list NEOs and compensation. No self-report bias.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section id="data">
+      <h2>6. Data &amp; where it comes from</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Source 1 — Wikipedia</h3>
+          <p class="muted">Script: <code>scripts/fetch_sp500_constituents.py</code></p>
+          <ul>
+            <li>Fetches the <a style="color:var(--accent)" href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies">S&amp;P 500 list</a> table.</li>
+            <li>Extracts <b>ticker, company name, GICS sector</b>.</li>
+            <li>Normalizes ticker class shares (<code>BRK.B</code> → <code>BRK-B</code>).</li>
+            <li>Writes <code>data/sp500_constituents.csv</code> (~503 rows).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Source 2 — SEC EDGAR</h3>
+          <p class="muted">Script: <code>scripts/collect_sec_data.py</code></p>
+          <ul>
+            <li>Uses the <code>edgartools</code> Python library.</li>
+            <li>For each ticker: <code>Company(ticker).get_filings(form="DEF 14A")[0]</code> → latest proxy.</li>
+            <li>Pulls both the XBRL-parsed object and the <b>rendered markdown</b> of the filing.</li>
+            <li>SEC-friendly: sets an identity header and sleeps 2 s between tickers.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        <b>What is a DEF 14A?</b> The definitive proxy statement US public firms must file before the
+        annual meeting. It contains: board nominees, the Summary Compensation Table (SCT), Pay vs
+        Performance, auditor ratification, etc. The SCT is where NEO names appear.
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section id="scraper">
+      <h2>7. How the scraper actually works</h2>
+      <p>Open <code>scripts/collect_sec_data.py</code> if asked. You need to be able to narrate these 5 steps:</p>
+
+      <details open>
+        <summary>Step 1 — Load tickers</summary>
+        <p><code>load_companies()</code> reads <code>data/sp500_constituents.csv</code> → list of
+        <code>(ticker, company, industry)</code> tuples.</p>
+      </details>
+
+      <details>
+        <summary>Step 2 — Fetch latest DEF 14A per ticker</summary>
+        <pre>from edgar import Company, set_identity
+set_identity("Leadership Research UZH research@uzh.ch")
+filings = Company(ticker).get_filings(form="DEF 14A")
+latest  = filings[0]
+proxy   = latest.obj()     # structured (XBRL) view
+md      = latest.markdown() # rendered markdown of filing body</pre>
+      </details>
+
+      <details>
+        <summary>Step 3 — Extract NEO names from the Summary Compensation Table</summary>
+        <p>Function: <code>extract_neos_from_compensation_table(md)</code>.</p>
+        <ul>
+          <li>Scans the markdown for the phrase <b>"Summary Compensation Table"</b>.</li>
+          <li>Walks forward until it finds a pipe-delimited header row that contains the word <b>"salary"</b>.</li>
+          <li>Then reads each subsequent table row: if the first cell looks like a person's name
+              (regex + capitalization rules) <b>and</b> dollar amounts (<code>[\d,]{6,}</code>) appear on that row
+              or the next 3 lines, it's recorded as a NEO.</li>
+          <li>Handles two proxy styles: (A) name + salary same row (GM, META), (B) name one row, salary next row (AAPL, MSFT).</li>
+          <li>Fallback: if fewer than 2 NEOs found, try <code>proxy.named_executives</code> (XBRL attribute).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Step 4 — Build honorific lookup for the whole filing</summary>
+        <p>Function: <code>build_honorific_lookup(md)</code>.</p>
+        <p>Regex scans every line for <code>Mr. Cook</code>, <code>Ms. Adams</code>, <code>Mrs. Smith</code>.
+        Returns two sets of lowercase last-names that the filing itself has <i>already</i> gendered.
+        This is the single most reliable signal.</p>
+      </details>
+
+      <details>
+        <summary>Step 5 — Assign gender + write CSV row</summary>
+        <p>For each NEO, run the 3-tier cascade (next section). Aggregate counts, compute
+        <code>pct_female_neos</code>, write row to <code>leadership_gender_data.csv</code>.
+        Log failures to <code>_failed_tickers.json</code> so you can re-run only those with <code>--retry-failed</code>.</p>
+      </details>
+    </section>
+
+    <!-- 8 -->
+    <section id="gender">
+      <h2>8. How gender is assigned (the 3-tier cascade)</h2>
+      <p>Function: <code>determine_gender(full_name, mr_set, ms_set)</code>.</p>
+      <ol>
+        <li><b>Tier 1 — Honorific in name itself.</b> If the name literally starts with <code>Mr.</code>, <code>Ms.</code>, or <code>Mrs.</code> → decided.</li>
+        <li><b>Tier 2 — Last-name lookup.</b> Check the NEO's last name against the <code>Mr./Ms./Mrs.</code> sets harvested from the full filing.
+            Example: filing says "Ms. Adams" somewhere else → any NEO with last name Adams is female.</li>
+        <li><b>Tier 3 — First-name heuristic.</b> Compare the cleaned first name against two curated sets (<code>FEMALE_NAMES</code>, <code>MALE_NAMES</code>) in the script.
+            If no match → <b><code>unknown</code></b>, flagged for manual verification (not dropped).</li>
+      </ol>
+      <div class="callout warn">
+        If the prof pushes on gender inference validity: this is a known limitation.
+        You're not <i>asking</i> people their gender; you're inferring from filings and names.
+        That's standard in accounting/finance papers (e.g., Adams &amp; Ferreira 2009 for boards,
+        Xu 2023 for executive promotions). The honorific check is your strongest defense — it's the
+        firm's own language, not your guess.
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section id="outputs">
+      <h2>9. Output files you wrote</h2>
+      <table>
+        <thead><tr><th>File</th><th>What's in it</th><th>Rows</th></tr></thead>
+        <tbody>
+          <tr><td><code>data/sp500_constituents.csv</code></td><td>ticker, company, industry</td><td>503</td></tr>
+          <tr><td><code>data/leadership_gender_data.csv</code></td><td>per-firm NEO counts + gender + CEO name</td><td>500</td></tr>
+          <tr><td><code>data/sec_filings_index.csv</code></td><td>filing dates &amp; types (audit trail)</td><td>500</td></tr>
+          <tr><td><code>data/merged_leadership_data.csv</code></td><td>analysis-ready merged table</td><td>500</td></tr>
+          <tr><td><code>data/_failed_tickers.json</code></td><td>3 current fails: BX, PSKY, Q</td><td>3</td></tr>
+        </tbody>
+      </table>
+      <h3>Key columns in <code>merged_leadership_data.csv</code></h3>
+      <pre>ticker, company, industry, filing_date,
+ceo_name, ceo_gender,
+total_neos, female_neos, male_neos, unknown_neos, pct_female_neos,
+neo_names_json,
+sec_filing_date, sec_filing_type, data_source</pre>
+    </section>
+
+    <!-- 10 -->
+    <section id="stats">
+      <h2>10. Current sample statistics (real numbers)</h2>
+      <div class="stat-row">
+        <div class="card"><div class="big-num">500</div><div class="big-label">Firms processed</div></div>
+        <div class="card"><div class="big-num">340</div><div class="big-label">With non-zero NEOs</div></div>
+        <div class="card"><div class="big-num">9%</div><div class="big-label">Female CEOs (43 / 500)</div></div>
+        <div class="card"><div class="big-num">10.4%</div><div class="big-label">Mean % female NEOs</div></div>
+      </div>
+
+      <h3>Totals across all NEOs</h3>
+      <table>
+        <thead><tr><th>Gender</th><th>Count</th><th>Share</th></tr></thead>
+        <tbody>
+          <tr><td>Male NEOs</td><td>1,184</td><td>68.8%</td></tr>
+          <tr><td>Female NEOs</td><td>273</td><td>15.9%</td></tr>
+          <tr><td>Unknown</td><td>264</td><td>15.3%</td></tr>
+          <tr><td><b>Total NEOs</b></td><td><b>1,721</b></td><td>100%</td></tr>
+        </tbody>
+      </table>
+
+      <h3>By industry — mean % female NEOs (sorted)</h3>
+      <table>
+        <thead><tr><th>Industry (GICS)</th><th>N firms</th><th>Mean % female NEOs</th></tr></thead>
+        <tbody>
+          <tr><td>Consumer Discretionary</td><td>48</td><td>15.0%</td></tr>
+          <tr><td>Health Care</td><td>60</td><td>14.6%</td></tr>
+          <tr><td>Communication Services</td><td>22</td><td>13.7%</td></tr>
+          <tr><td>Real Estate</td><td>31</td><td>11.3%</td></tr>
+          <tr><td>Utilities</td><td>31</td><td>10.8%</td></tr>
+          <tr><td>Information Technology</td><td>70</td><td>9.3%</td></tr>
+          <tr><td>Industrials</td><td>79</td><td>9.0%</td></tr>
+          <tr><td>Materials</td><td>26</td><td>8.9%</td></tr>
+          <tr><td>Consumer Staples</td><td>36</td><td>8.8%</td></tr>
+          <tr><td>Energy</td><td>22</td><td>8.1%</td></tr>
+          <tr><td>Financials</td><td>75</td><td>7.3%</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        Memorize: <b>Consumer Discretionary is highest (~15%); Financials is lowest (~7%).</b>
+        This is a good hook to discuss H3 (industry moderator).
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section id="analysis">
+      <h2>11. Analysis plan (what you'll do next in R)</h2>
+      <ol>
+        <li><b>Descriptives</b> + correlation matrix of numeric vars.</li>
+        <li><b>OLS regression</b>: <code>pct_female_neos ~ female_ceo + industry + log_firm_size + controls</code>.</li>
+        <li><b>Interaction</b>: add <code>female_ceo × industry</code> (or board_div × industry once board data is merged) to test H3.</li>
+        <li><b>Assumption checks</b>: linearity plots, residual normality (QQ), Breusch–Pagan for heteroskedasticity, <b>VIF</b> for multicollinearity (keep &lt; 5).</li>
+        <li><b>Robustness</b>:
+          <ul>
+            <li>Replace DV with <i>count</i> of female NEOs (Poisson / negative binomial).</li>
+            <li>Drop firms with <code>unknown_neos &gt; 0</code>.</li>
+            <li>Drop firms with <code>total_neos &lt; 3</code> (parser likely incomplete).</li>
+            <li>Subgroup analysis by industry.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 12 -->
+    <section id="caveats">
+      <h2>12. Known caveats — own these before the prof raises them</h2>
+      <div class="card">
+        <div class="pill-list">
+          <span class="tag bad">Parser coverage</span>
+          <span class="tag bad">Binary gender</span>
+          <span class="tag bad">Cross-sectional</span>
+          <span class="tag bad">Selection</span>
+          <span class="tag bad">Unknown NEOs</span>
+        </div>
+      </div>
+      <ul>
+        <li><b>Parser coverage.</b> 160/500 firms returned 0 NEOs — that's a <i>parser</i> issue, not missing filings. Different proxy layouts, zero-width spaces (UNH), image-based PDFs, etc. Treat as a coverage caveat; re-run with an improved parser for final analysis.</li>
+        <li><b>Gender inference is binary + based on names.</b> Doesn't capture non-binary identities; misclassifies ambiguous names. Honorific tier mitigates but doesn't eliminate.</li>
+        <li><b>Cross-sectional snapshot.</b> One filing per firm → no causal claims, only associations.</li>
+        <li><b>Selection.</b> S&amp;P 500 = already large-cap, survivors. Results don't generalize to SMEs or private firms.</li>
+        <li><b>"Unknown" NEOs</b> (15% of name-count) are preserved in data, not dropped. They bias <code>pct_female_neos</code> downward if truly female.</li>
+        <li><b>3 failed tickers</b>: <code>BX</code> (Blackstone), <code>PSKY</code>, <code>Q</code> — either symbol mismatch or atypical filings. Listed in <code>_failed_tickers.json</code>.</li>
+      </ul>
+    </section>
+
+    <!-- 13 -->
+    <section id="evolution">
+      <h2>13. How the project evolved (the narrative)</h2>
+      <ol>
+        <li><b>Proposal.</b> Start with broader "women in leadership" question; originally planned N = 50 firms, manual collection, board + C-suite variables, industry moderator.</li>
+        <li><b>Pilot (N = 50).</b> Manual pull from corporate governance reports. Produced descriptives: mean board diversity 33%, mean C-suite diversity 18.2%, 8% female CEOs — already in the proposal.</li>
+        <li><b>Scale-up.</b> Replaced manual collection with the SEC EDGAR scraper. Switched from "C-suite" (hard to define consistently) to "NEOs" (legally-defined, standard in finance research, disclosed in every DEF 14A).</li>
+        <li><b>Full S&amp;P 500 pull.</b> 500 rows produced. Parser hits 340/500, ~68% coverage.</li>
+        <li><b>Now.</b> Pilot-level analysis already possible on the scraped data (H2 and H3-as-main-effect). Board-composition data is the next extension.</li>
+      </ol>
+      <div class="callout">
+        If the prof says "this looks different from your proposal" — say: <i>"Yes, I replaced manual
+        collection with an automated SEC EDGAR pipeline and shifted the DV from self-defined C-suite
+        to SEC-mandated NEOs to make the measure auditable and scalable to the full S&amp;P 500."</i>
+      </div>
+    </section>
+
+    <!-- 14 -->
+    <section id="qa">
+      <h2>14. Likely prof questions — have an answer ready</h2>
+
+      <div class="qa">
+        <div class="q">Q: "What's your dependent variable and why?"</div>
+        <div class="a">Percent female among the firm's Named Executive Officers in the latest DEF 14A. NEOs is SEC-mandated disclosure (top 3–5 paid execs: CEO, CFO, next three), so it's the most consistent, auditable proxy for "top leadership" across 500 firms.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "How do you know the gender is right?"</div>
+        <div class="a">Three-tier cascade: honorific in the filing text (Mr./Ms./Mrs.) is primary — that's the firm's own language, not my guess. Fallback is first-name lookup. Remaining ~15% stays as 'unknown' for manual QA; I don't drop them silently.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "Why do 160 firms have zero NEOs?"</div>
+        <div class="a">Parser coverage, not missing filings. Each proxy has a unique layout; my parser handles two dominant formats (name+$ same row, name+$ split rows) and falls back to XBRL, but some filings (image PDFs, unusual table structures, embedded zero-width chars) still miss. A coverage caveat I'll address with parser improvements or manual QA on non-zero analytic subsample.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "Why DEF 14A and not the 10-K?"</div>
+        <div class="a">The DEF 14A is the definitive proxy statement — SEC Reg S-K Item 402 requires disclosure of NEO names and compensation there, not in the 10-K. So DEF 14A is the single canonical source.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "Endogeneity? Female CEO firms may differ systematically."</div>
+        <div class="a">Right — this is observational, associational, not causal. Female-CEO firms likely differ on industry, size, culture. I'll include GICS sector fixed effects and log firm size as controls, and I'm upfront that H2 is an association, not a treatment effect.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "What's your N? Is it enough?"</div>
+        <div class="a">500 firms pulled, 340 with non-zero NEO data. For a cross-sectional OLS with ~12 industries and one binary IV, that's comfortably powered — the bigger concern is coverage bias (non-random parser misses), which I'll check with sensitivity analysis.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "How does this connect to existing literature?"</div>
+        <div class="a">Eagly &amp; Carli (2007) on individual-level barriers; Adams &amp; Ferreira-type work on boards; Xu (2023) on executive promotions; the Catalyst (2024) descriptives. My contribution is a firm-level, publicly-verifiable pipeline across the full S&amp;P 500, shifting focus from individual barriers to firm enablers.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "What happens if a firm has no board-diversity data?"</div>
+        <div class="a">Board variables are a planned extension; the pilot version of the paper uses only NEO gender and CEO gender (both derivable directly from the proxy). H1 becomes testable once I merge in board composition from the same DEF 14A's Director table.</div>
+      </div>
+
+      <div class="qa">
+        <div class="q">Q: "What analysis will you actually run?"</div>
+        <div class="a">OLS in R: <code>pct_female_neos ~ female_ceo + factor(industry) + log_employees</code>, then add female_ceo × industry. VIF, BP test, QQ plot. Robustness with count DV (Poisson), drop-unknown, drop-small-NEO.</div>
+      </div>
+    </section>
+
+    <!-- 15 -->
+    <section id="cheat">
+      <h2>15. Last-minute cheat sheet (open this while in the meeting)</h2>
+      <div class="card">
+        <table>
+          <tbody>
+            <tr><td><b>Topic</b></td><td><b>Say this</b></td></tr>
+            <tr><td>DV</td><td><code>pct_female_neos</code> = female_neos / total_neos × 100</td></tr>
+            <tr><td>IV</td><td><code>ceo_gender</code> (binary) + <code>industry</code> (GICS)</td></tr>
+            <tr><td>Source</td><td>SEC EDGAR DEF 14A proxy (via <code>edgartools</code>)</td></tr>
+            <tr><td>N</td><td>500 pulled / 340 usable</td></tr>
+            <tr><td>Female CEOs</td><td>43 of 500 (~9%)</td></tr>
+            <tr><td>Mean %F NEOs</td><td>10.4%</td></tr>
+            <tr><td>Highest industry</td><td>Consumer Discretionary (15.0%)</td></tr>
+            <tr><td>Lowest industry</td><td>Financials (7.3%)</td></tr>
+            <tr><td>Gender logic</td><td>3-tier: honorific → last-name lookup → first-name dict → unknown</td></tr>
+            <tr><td>Analysis</td><td>OLS in R with industry FE + interaction; VIF, BP, QQ; robustness Poisson count</td></tr>
+            <tr><td>Biggest weakness</td><td>Parser coverage (68%) + binary gender inference</td></tr>
+            <tr><td>Next step</td><td>Merge board-composition from same filings; re-run with H1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Five phrases to keep in your pocket</h3>
+      <ol>
+        <li>"The dependent variable is <i>percent female among Named Executive Officers</i> — that's the SEC-mandated disclosure, which makes it auditable and consistent."</li>
+        <li>"Gender is inferred with a three-tier cascade, prioritizing the honorific the firm itself uses."</li>
+        <li>"This is associational, not causal — it's a cross-sectional snapshot across the S&amp;P 500."</li>
+        <li>"Coverage is currently 340 of 500 due to parser limits, not missing filings."</li>
+        <li>"The industry moderator is the most interesting piece — financials trail, consumer discretionary leads."</li>
+      </ol>
+
+      <h3>Pre-meeting checklist</h3>
+      <ul class="checklist">
+        <li>Open <code>data/merged_leadership_data.csv</code> in a viewer, scroll to your firm of choice</li>
+        <li>Open <code>scripts/collect_sec_data.py</code> so you can scroll to the SCT parser if asked</li>
+        <li>Bring printed Peer Check-In form</li>
+        <li>Have the one-liner memorized</li>
+        <li>Know the three numbers: 500 / 340 / 9% / 10.4%</li>
+      </ul>
+    </section>
+
+    <p class="muted" style="margin-top: 40px; font-size: 12px;">Generated from the repo state on Apr 23, 2026. Stats computed live from <code>merged_leadership_data.csv</code>.</p>
+  </main>
+</div>
+
+<script>
+  const bar = document.getElementById('progressBar');
+  function onScroll() {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  }
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+</script>
+</body>
+</html>
